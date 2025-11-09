@@ -4,11 +4,9 @@
     - !<own> 486a32a0-b416-4316-8a77-47518583fd1a
 - !<PassInfo/486a32a0-b416-4316-8a77-47518583fd1a>
   CachedProperties:
-    - Port_Default_N369:
-        typeIdx: 5
-        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  DepthWrite: true
-  DepthTest: true
+    []
+  DepthWrite: false
+  DepthTest: false
   DepthFunction: LessEqual
   TwoSided: false
   ColorMask: {x: true, y: true, z: true, w: true}
@@ -46,4 +44,4 @@
           borderColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
           mipmaps: false
         type: Texture2D
-  Pass: !<reference> 63d0a031-e4ce-4dea-a6b7-237e81a67f58
+  Pass: !<reference> e73826df-3548-4630-b3f5-04e2e5244d02

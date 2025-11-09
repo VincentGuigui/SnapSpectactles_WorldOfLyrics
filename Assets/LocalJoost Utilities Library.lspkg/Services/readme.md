@@ -1,1 +1,0 @@
-Usage: see https://localjoost.github.io/Service-driven-development-for-Snap-Spectacles-in-Lens-Studio/

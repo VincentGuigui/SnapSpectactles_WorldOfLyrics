@@ -1,1 +1,0 @@
-Usage: see https://localjoost.github.io/A-Lens-Studio-component-to-let-the-user-locate-points-on-the-floor-in-Spectacles/
