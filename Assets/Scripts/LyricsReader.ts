@@ -24,6 +24,8 @@ export class LyricsReader extends BaseScriptComponent {
     private Sky: SceneObject = undefined
 
     @input Lyrics: string = undefined
+
+    _lyricsLocations: SceneObject[]
     _lyrics: LyricsData = undefined
     _startTime: number = 0
     _currentPosition: number = 0
@@ -31,6 +33,10 @@ export class LyricsReader extends BaseScriptComponent {
     private _state = "stopped";
 
     onAwake() {
+        this._lyricsLocations = [
+            this.Hand, this.Thinking, this.Singing, this.Floor, this.Wall, this.Signage, this.Sky
+        ]
+
         this.textTemplate = this.sceneObject.getComponent("Component.Text")
         this.setAllTexts(undefined, "Lyrics")
         this._lyrics = JSON.parse(this.Lyrics)
@@ -41,12 +47,15 @@ export class LyricsReader extends BaseScriptComponent {
 
     setAllTexts(obj: SceneObject = undefined, newText: string) {
         if (obj == undefined) {
-            obj = this.sceneObject
-        }
-        this.setText(obj, newText);
-        // Recursively check children
-        for (var i = 0; i < obj.getChildrenCount(); i++) {
-            this.setAllTexts(obj.getChild(i), newText);
+            for (var i = 0; i < this._lyricsLocations.length; i++) {
+                this.setAllTexts(this._lyricsLocations[i], newText);
+            }
+        } else {
+            this.setText(obj, newText);
+            // Recursively check children
+            for (var i = 0; i < obj.getChildrenCount(); i++) {
+                this.setAllTexts(obj.getChild(i), newText);
+            }
         }
     }
 
@@ -80,6 +89,9 @@ export class LyricsReader extends BaseScriptComponent {
             var split = Math.random() > 0.5
             this.Singing.enabled = split
             this.Thinking.enabled = !split
+        }
+        if (!this.HeadBinding.isEnabledInHierarchy) {
+            this._headAlreadyVisible = false
         }
         this.Hand.enabled = !this.HeadBinding.isEnabledInHierarchy;
 

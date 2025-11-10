@@ -36,7 +36,7 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    []
+    - !<own> 15a76bb2-603d-4e49-bfe6-9352e8bb022e
   Components:
     - !<own> 00000000-0000-0065-0000-000000000065
     - !<own> 50ee7494-674a-4c52-9b1b-7d4b0850e301
@@ -269,12 +269,12 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 180
+  FontSize: 90
   Font: !<reference> b06a4d49-868a-43b7-ad1e-fb1be384f123
   LayoutRect:
-    left: -30.000000
+    left: -15.000000
     bottom: 0.000000
-    right: 30.000000
+    right: 15.000000
     top: 0.000000
   OverflowVertical: Overflow
   OverflowHorizontal: Wrap
@@ -340,7 +340,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Position: {x: 0.000000, y: 0.000000, z: -40.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -501,7 +501,6 @@
     HasSegmentScaleCompensation: false
   Children:
     - !<own> b42d2a38-2bcc-44c4-b841-4e42e6754657
-    - !<own> 15a76bb2-603d-4e49-bfe6-9352e8bb022e
     - !<own> 4554f354-b42a-4a95-be1d-292cb0b2d8d5
     - !<own> 9ca86add-7c3b-4ba0-9853-3e3addf79ea7
     - !<own> dc3908d2-5115-4e9c-8f32-fb500424aaac
@@ -637,7 +636,7 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 80.000000, y: 80.000008, z: 80.000008}
+    Scale: {x: 40.000000, y: 40.000004, z: 40.000004}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -665,7 +664,7 @@
   Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 41.664516, y: 33.198299, z: 0.000000}
+    Position: {x: 27.093390, y: 18.044838, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -1063,7 +1062,7 @@
   Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -13.962276, y: 50.686245, z: 0.000000}
+    Position: {x: -6.280606, y: 27.696112, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -1919,7 +1918,7 @@
       handFollowObject: !<reference.SceneObject> 0c199c41-b7b7-400d-95de-4d017670319e
       distanceToHand: !<float> -2.000000
       maxHandAngle: !<float> 70.000000
-      handTypes: both
+      handTypes: right
       trackedLandmark: palmCenter
       viewInEditor: true
   ScriptTypes:
@@ -2092,21 +2091,21 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 140
+  FontSize: 70
   Font: !<reference> b06a4d49-868a-43b7-ad1e-fb1be384f123
   LayoutRect:
-    left: -20.000000
+    left: -10.000000
     bottom: 0.000000
-    right: 20.000000
+    right: 10.000000
     top: 0.000000
   OverflowVertical: Overflow
   OverflowHorizontal: Wrap
   Fill: !<TextFill>
-    Mode: Solid
+    Mode: Texture
     Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
-    Texture: !<reference> 00000000-0000-0000-0000-000000000000
-    ColorTint: {x: 1.000000, y: 0.000000, z: 0.015686, w: 1.000000}
-    TileCount: 5.000000
+    Texture: !<reference> f0d0606d-3f03-46e8-8b93-5e36aadd199f
+    ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    TileCount: 2.000000
     TileZone: Rect
     TextureStretch: FitWidth
   BlendMode: PremultipliedAlphaAuto
@@ -2229,7 +2228,7 @@
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 80.000000, y: 80.000008, z: 80.000008}
+    Scale: {x: 40.000000, y: 40.000004, z: 40.000004}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -2562,7 +2561,7 @@
       handFollowObject: !<reference.SceneObject> 9cc9a2f0-94a0-4550-bd72-06bfcbf441d7
       distanceToHand: !<float> -2.000000
       maxHandAngle: !<float> 70.000000
-      handTypes: both
+      handTypes: right
       trackedLandmark: palmCenter
       viewInEditor: true
   ScriptTypes:
@@ -2893,7 +2892,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 3.036545, z: 0.000000}
+    Position: {x: 0.000000, y: 1.878586, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
