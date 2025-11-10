@@ -8,10 +8,21 @@ export class PlayMusic extends BaseScriptComponent {
   private LyricsReader: LyricsReader
 
   @input
-  private MusicTitles: string[] = []
+  private SongTitles: string[] = [
+    "Birthday Song",
+    "Crazy People",
+    "Crowded City",
+    "Family Time",
+    "Flying through the sky",
+    "Light in the Night",
+    "Sunshine Dance"
+  ]
 
   @input
-  private MusicCovers: Material[] = []
+  private SongCover: Material[] = []
+
+  @input
+  private CurrentSong: number = 1;
 
   @input
   private PlayMaterial: Material = undefined
@@ -19,7 +30,11 @@ export class PlayMusic extends BaseScriptComponent {
   @input
   private PauseMaterial: Material = undefined
 
-  @input PlayPauseImageButton: Image = undefined
+  @input
+  private PlayPauseImageButton: Image = undefined
+
+  @input
+  private StopButton: SceneObject = undefined
 
   @input("Component.Image")
   private coverImage: Image | undefined
@@ -42,9 +57,7 @@ export class PlayMusic extends BaseScriptComponent {
   }
 
   private _audioComponent: AudioComponent | undefined
-
-  private coverIndex = 1;
-
+  private _state = "stopped";
 
   onAwake() {
     this.createEvent('OnStartEvent').bind(() => {
@@ -52,7 +65,6 @@ export class PlayMusic extends BaseScriptComponent {
     });
   }
 
-  private isPlaying = false;
   onStart() {
     this._audioComponent = this.getSceneObject().createComponent("Component.AudioComponent") as AudioComponent
     this._audioComponent.playbackMode = Audio.PlaybackMode.LowLatency
@@ -61,54 +73,63 @@ export class PlayMusic extends BaseScriptComponent {
     var tg = ToggleButton.getTypeName()
     let toggleButton = this.sceneObject.getComponent(tg);
 
-    let onStateChangedCallback = (state: boolean) => {
+    let on_stateChangedCallback = (_state: boolean) => {
 
       this.updateCoverFlow();
 
-      //toggleButton.onStateChanged.add(onStateChangedCallback);
+      //toggleButton.on_stateChanged.add(on_stateChangedCallback);
     };
   }
 
-  playPause() {
-    if (this._audioComponent == undefined) return;
-    if (!this.isPlaying) {
-      this._audioComponent.audioTrack = this._audioTrackAsset
-      this.PlayPauseImageButton.mainMaterial = this.PauseMaterial
-      console.log("Play")
-      this._audioComponent.play(1)
-      this.LyricsReader.start()
-      this.isPlaying = true;
-    } else {
-      console.log("Pause")
-      this.PlayPauseImageButton.mainMaterial = this.PlayMaterial
-      this._audioComponent.pause()
-      this.LyricsReader.pause()
-      this.isPlaying = false;
-    }
-  }
-
   updateCoverFlow() {
-    console.log("coverIndex", this.coverIndex)
-    this.coverTitle.text = this.MusicTitles[this.coverIndex];
-    this.coverImage.mainMaterial = this.MusicCovers[this.coverIndex];
+    this.coverTitle.text = this.SongTitles[this.CurrentSong];
+    this.coverImage.mainMaterial = this.SongCover[this.CurrentSong];
   }
-
 
   next() {
-    console.log("next")
-    this.coverIndex = this.coverIndex + 1;
-    if (this.coverIndex > this.MusicTitles.length) {
-      this.coverIndex = 0;
+    this.CurrentSong = this.CurrentSong + 1;
+    if (this.CurrentSong > this.SongTitles.length) {
+      this.CurrentSong = 0;
     }
     this.updateCoverFlow();
   }
 
   previous() {
-    this.coverIndex = this.coverIndex - 1;
-    if (this.coverIndex < 0) {
-      this.coverIndex = this.MusicTitles.length - 1;
+    this.CurrentSong = this.CurrentSong - 1;
+    if (this.CurrentSong < 0) {
+      this.CurrentSong = this.SongTitles.length - 1;
     }
     this.updateCoverFlow();
-
   }
+
+  playPause() {
+    if (this._audioComponent == undefined) return;
+    if (this._state == "playing") {
+      this.PlayPauseImageButton.mainMaterial = this.PlayMaterial
+      this._audioComponent.pause()
+      this.LyricsReader.pause()
+      this._state = "paused";
+    } else {
+      if (this._state == "stopped") {
+        this._audioComponent.audioTrack = this._audioTrackAsset
+        this.PlayPauseImageButton.mainMaterial = this.PauseMaterial
+        this._audioComponent.play(-1)
+      }
+      if (this._state == "paused") {
+        this.PlayPauseImageButton.mainMaterial = this.PauseMaterial
+        this._audioComponent.resume()
+      }
+      this.LyricsReader.start()
+      this._state = "playing";
+      this.StopButton.enabled = true
+    }
+  }
+
+  stop() {
+    this._audioComponent.stop(true)
+    this.LyricsReader.stop()
+    this.StopButton.enabled = false
+    this._state = "stopped";
+  }
+
 }

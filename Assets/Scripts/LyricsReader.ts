@@ -26,6 +26,9 @@ export class LyricsReader extends BaseScriptComponent {
     @input Lyrics: string = undefined
     _lyrics: LyricsData = undefined
     _startTime: number = 0
+    _currentPosition: number = 0
+    private _headAlreadyVisible = false
+    private _state = "stopped";
 
     onAwake() {
         this.textTemplate = this.sceneObject.getComponent("Component.Text")
@@ -62,13 +65,15 @@ export class LyricsReader extends BaseScriptComponent {
     }
 
     start() {
-        this._startTime = getTime();
+        if (this._state == "stopped")
+            this._startTime = getTime();
+        else if (this._state == "paused")
+            this._startTime = getTime() - this._currentPosition
+        this._state = "playing"
     }
 
-    _headAlreadyVisible = false
-
     update() {
-        if (this._startTime == 0) return
+        if (this._state == "stopped") return
 
         if (this.Head.enabled && !this._headAlreadyVisible) {
             this._headAlreadyVisible = true
@@ -77,17 +82,28 @@ export class LyricsReader extends BaseScriptComponent {
             this.Thinking.enabled = !split
         }
         this.Hand.enabled = !this.HeadBinding.isEnabledInHierarchy;
-        var currentTime = getTime() - this._startTime - 2
-        for (var l = 0; l < this._lyrics.timed.line.length; l++) {
-            var line = this._lyrics.timed.line[l]
-            if (line.begin > currentTime && currentTime < line.end) {
-                this.setAllTexts(undefined, line.content)
-                return
+
+        if (this._state == "playing") {
+            this._currentPosition = getTime() - this._startTime
+            for (var l = 0; l < this._lyrics.timed.line.length; l++) {
+                var line = this._lyrics.timed.line[l]
+                if (line.begin < this._currentPosition && this._currentPosition < line.end) {
+                    this.setAllTexts(undefined, line.content)
+                    return;
+                }
             }
         }
     }
 
     pause() {
+        this._state = "paused"
+        this.Singing.enabled = false
+        this.Thinking.enabled = false
+        this.Hand.enabled = false
+    }
+
+    stop() {
+        this._state = "stopped"
         this._startTime = 0
         this.Singing.enabled = false
         this.Thinking.enabled = false

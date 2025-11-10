@@ -28,7 +28,10 @@
   ScriptInputsHidden:
     distanceToHand: false
     handFollowObject: false
+    handTypes: false
     maxHandAngle: false
+    trackedLandmark: false
+    viewInEditor: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -41,6 +44,9 @@
     - handFollowObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       distanceToHand: !<float> 5.000000
       maxHandAngle: !<float> 30.000000
+      handTypes: ""
+      trackedLandmark: palmCenter
+      viewInEditor: false
   ScriptTypes:
     -
       {}
@@ -48,3 +54,6 @@
     - // @input SceneObject handFollowObject
     - // @input float distanceToHand = 10
     - // @input float maxHandAngle = 30
+    - '// @input string handTypes = "both" {"widget":"combobox", "values":[{"label":"Both", "value":"both"}, {"label":"Left", "value":"left"}, {"label":"Right", "value":"right"}]}'
+    - '// @input string trackedLandmark = "palmCenter" {"widget":"combobox", "values":[{"label":"palmCenter", "value":"palmCenter"}, {"label":"indexKnuckle", "value":"indexKnuckle"}, {"label":"indexMidJoint", "value":"indexMidJoint"}, {"label":"indexUpperJoint", "value":"indexUpperJoint"}, {"label":"indexTip", "value":"indexTip"}, {"label":"middleKnuckle", "value":"middleKnuckle"}, {"label":"middleMidJoint", "value":"middleMidJoint"}, {"label":"middleUpperJoint", "value":"middleUpperJoint"}, {"label":"middleTip", "value":"middleTip"}, {"label":"ringKnuckle", "value":"ringKnuckle"}, {"label":"ringMidJoint", "value":"ringMidJoint"}, {"label":"ringUpperJoint", "value":"ringUpperJoint"}, {"label":"ringTip", "value":"ringTip"}, {"label":"pinkyKnuckle", "value":"pinkyKnuckle"}, {"label":"pinkyMidJoint", "value":"pinkyMidJoint"}, {"label":"pinkyUpperJoint", "value":"pinkyUpperJoint"}, {"label":"pinkyTip", "value":"pinkyTip"}, {"label":"thumbBaseJoint", "value":"thumbBaseJoint"}, {"label":"thumbDistal", "value":"thumbDistal"}, {"label":"thumbMidJoint", "value":"thumbMidJoint"}, {"label":"thumbTip", "value":"thumbTip"}, {"label":"wrist", "value":"wrist"}, {"label":"thumbToWrist", "value":"thumbToWrist"}, {"label":"indexToWrist", "value":"indexToWrist"}, {"label":"middleToWrist", "value":"middleToWrist"}, {"label":"ringToWrist", "value":"ringToWrist"}, {"label":"pinkyToWrist", "value":"pinkyToWrist"}]}'
+    - // @input bool viewInEditor

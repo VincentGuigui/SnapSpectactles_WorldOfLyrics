@@ -26,12 +26,14 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
+    CurrentSong: false
     LyricsReader: false
-    MusicCovers: false
-    MusicTitles: false
     PauseMaterial: false
     PlayMaterial: false
     PlayPauseImageButton: false
+    SongCover: false
+    SongTitles: false
+    StopButton: false
     _audioTrackAsset: false
     coverImage: false
     coverTitle: false
@@ -45,13 +47,15 @@
     []
   DefaultScriptInputs:
     - LyricsReader: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
-      MusicTitles: !<string[]>
+      SongTitles: !<string[]>
         []
-      MusicCovers: !<reference.Material[]>
+      SongCover: !<reference.Material[]>
         []
+      CurrentSong: !<float> 1.000000
       PlayMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
       PauseMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
       PlayPauseImageButton: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      StopButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       coverImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
       coverTitle: !<reference.Text> 00000000-0000-0000-0000-000000000000
       _audioTrackAsset: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
@@ -60,11 +64,13 @@
       {}
   InputLines:
     - // @input AssignableType LyricsReader
-    - "// @input string[] MusicTitles = {}"
-    - "// @input Asset.Material[] MusicCovers = {}"
+    - '// @input string[] SongTitles = {"Birthday Song","Crazy People","Crowded City","Family Time","Flying through the sky","Light in the Night","Sunshine Dance"}'
+    - "// @input Asset.Material[] SongCover = {}"
+    - // @input float CurrentSong = 1
     - // @input Asset.Material PlayMaterial
     - // @input Asset.Material PauseMaterial
     - // @input Component.Image PlayPauseImageButton
+    - // @input SceneObject StopButton
     - // @input Component.Image coverImage
     - // @input Component.Text coverTitle
     - // @input Asset.AudioTrackAsset _audioTrackAsset
