@@ -248,7 +248,7 @@
         []
       onFinishedCallbacks:
         []
-      _width: !<float> 1.000000
+      _width: 1.200000
   ScriptTypes:
     "":
       {}
@@ -333,6 +333,21 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
+- !<SceneObject/13b5879e-4b11-4a40-a8d4-b051e5c7fe95>
+  PrefabRemaps:
+    []
+  Name: family time
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 9245e011-4241-4fd8-8c94-4f70e3456203
 - !<SceneObject/15a76bb2-603d-4e49-bfe6-9352e8bb022e>
   PrefabRemaps:
     []
@@ -391,22 +406,7 @@
   ScriptInputs:
     "":
       LyricsReader: !<MappingBased.AssignableType> 680b0433-53db-4074-b014-d36f7c540465
-      SongTitles: !<string[]>
-        - Birthday Song
-        - Crazy People
-        - Crowded City
-        - Family Time
-        - Flying through the sky
-        - Light in the Night
-        - Sunshine Dance
-      SongCover: !<reference.Material[]>
-        - !<reference> 3ec34ef3-1e9a-49fc-9d5a-93db8ecd4106
-        - !<reference> 6f00277b-93ae-4903-891d-9db69e008a0d
-        - !<reference> 624016e5-fbe9-4f4f-a867-38ce3f441f9f
-        - !<reference> baa12517-dbd6-4e69-b64b-c94c26fe36f4
-        - !<reference> 16748161-7106-4819-afcb-0ad8374628dd
-        - !<reference> 7c7114cd-d306-4a2f-949e-6e4039e7b4a5
-        - !<reference> 90e602e2-f8f9-4988-b841-16f31a06099b
+      SongsObject: !<MappingBased.AssignableType_1> 889614e3-0b02-446a-b424-bd56d62689b3
       CurrentSong: !<float> 6.000000
       PlayMaterial: !<reference.Material> 50b974a8-1979-4305-b816-5c30a4826c5c
       PauseMaterial: !<reference.Material> b7100bd0-830d-49ad-bd25-eb0ed88c2bba
@@ -506,6 +506,7 @@
     - !<own> dc3908d2-5115-4e9c-8f32-fb500424aaac
     - !<own> c5595f29-8b77-4d9e-8259-657005f8aa54
     - !<own> 6eaab80f-bf3d-472e-ba8f-736e60ec67a2
+    - !<own> 2b141a4c-35f2-4413-abd2-be970bdbc133
   Components:
     - !<own> 1ba6409b-f884-444c-a8e4-01bf461f17a9
     - !<own> 680b0433-53db-4074-b014-d36f7c540465
@@ -549,6 +550,27 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/2b141a4c-35f2-4413-abd2-be970bdbc133>
+  PrefabRemaps:
+    []
+  Name: Songs
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 3e4b3827-4faf-436e-8f3f-a69cef123af6
+    - !<own> 7da5bf2f-6bed-4bc5-8f24-442cfb671f60
+    - !<own> 7c6dec6b-d4f8-4de9-8393-fc84bb9c59a6
+    - !<own> 13b5879e-4b11-4a40-a8d4-b051e5c7fe95
+    - !<own> 8f57bbb5-43b8-47ab-b561-daf28e88a12d
+    - !<own> 8dfa0f91-bffe-4973-837c-c8009f9706b6
+    - !<own> 3caac291-1039-42fe-907c-dd3ddadb796a
+  Components:
+    - !<own> 889614e3-0b02-446a-b424-bd56d62689b3
 - !<ScriptComponent/2bb35e4a-ba35-4d2b-bdaa-b8b527436108>
   PrefabRemaps:
     []
@@ -642,6 +664,36 @@
     []
   Components:
     - !<own> dcfadafe-d8aa-4e55-a276-f0cbe3082ff0
+- !<SceneObject/3caac291-1039-42fe-907c-dd3ddadb796a>
+  PrefabRemaps:
+    []
+  Name: SunshineDance
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 5922afa5-5a8a-4629-a435-e9a55dbf1469
+- !<SceneObject/3e4b3827-4faf-436e-8f3f-a69cef123af6>
+  PrefabRemaps:
+    []
+  Name: birthday song
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> edace526-df50-42c9-948b-50f65f0d8f3e
 - !<SceneObject/41d17d73-ef5d-4e4f-abff-3ceb30b52ae4>
   PrefabRemaps:
     []
@@ -708,7 +760,7 @@
         []
       onFinishedCallbacks:
         []
-      _width: !<float> 1.000000
+      _width: 1.200000
   ScriptTypes:
     "":
       {}
@@ -824,6 +876,42 @@
     []
   Components:
     []
+- !<ScriptComponent/4a39036e-19d7-40bc-904e-5ebebfc807bb>
+  PrefabRemaps:
+    []
+  Name: crazy people
+  Enabled: true
+  ScriptAsset: !<reference> 778f99f6-6890-424f-907e-6fc95f4b8f54
+  ScriptInputsDefault:
+    title: true
+    cover: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      title: Crazy People
+      cover: !<reference.Material> 6f00277b-93ae-4903-891d-9db69e008a0d
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/4bda0ba6-0339-431e-9829-22c50b5a76b8>
+  PrefabRemaps:
+    []
+  Name: flying through the sky
+  Enabled: true
+  ScriptAsset: !<reference> eef15be1-9a47-4428-a76a-8e03230b72a2
+  ScriptInputsDefault:
+    title: true
+    cover: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      title: Flying Through the sky
+      cover: !<reference.Material> 16748161-7106-4819-afcb-0ad8374628dd
+  ScriptTypes:
+    "":
+      {}
 - !<DeviceTracking/50ee7494-674a-4c52-9b1b-7d4b0850e301>
   PrefabRemaps:
     []
@@ -1036,6 +1124,24 @@
     - !<own> 783e0a89-18fc-47a6-b793-2e8aaaeb47a5
   Components:
     []
+- !<ScriptComponent/5922afa5-5a8a-4629-a435-e9a55dbf1469>
+  PrefabRemaps:
+    []
+  Name: SunshineDance
+  Enabled: true
+  ScriptAsset: !<reference> b9bd1fb7-3c2d-47a1-936d-44cc9860a6a3
+  ScriptInputsDefault:
+    title: true
+    cover: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      title: Sunshine Dance
+      cover: !<reference.Material> 90e602e2-f8f9-4988-b841-16f31a06099b
+  ScriptTypes:
+    "":
+      {}
 - !<Image/5d49a88e-a6ab-4cea-98b4-e49864fc0dfe>
   PrefabRemaps:
     []
@@ -1103,7 +1209,6 @@
   ScriptInputs:
     "":
       Head: !<reference.SceneObject> 1e52cf3d-d0bd-4c18-a614-96b647002449
-      HeadBinding: !<reference.Head> 827d2490-84a8-4f7b-bee3-2c805e4cfa2c
       Hand: !<reference.SceneObject> 6eaab80f-bf3d-472e-ba8f-736e60ec67a2
       Thinking: !<reference.SceneObject> 62533e0c-9bd3-4ba2-ad7f-0b253daff8f2
       Singing: !<reference.SceneObject> 41e5d782-9816-4dd9-ac9b-2fffa91f7cb7
@@ -1111,407 +1216,6 @@
       Wall: !<reference.SceneObject> 9ca86add-7c3b-4ba0-9853-3e3addf79ea7
       Signage: !<reference.SceneObject> 4554f354-b42a-4a95-be1d-292cb0b2d8d5
       Sky: !<reference.SceneObject> c5595f29-8b77-4d9e-8259-657005f8aa54
-      Lyrics: |-
-        {
-            "duration_seconds": 225,
-            "language": "en",
-            "songTitle": "SunshineDance",
-            "timed": {
-                "line": [
-                    {
-                        "begin": 9.088209088209,
-                        "content": "I'm walking down",
-                        "end": 10.798930798931
-                    },
-                    {
-                        "begin": 10.919215919216,
-                        "content": "this quiet lane,",
-                        "end": 12.402732402732
-                    },
-                    {
-                        "begin": 14.247104247104,
-                        "content": "shoes tapping in",
-                        "end": 15.837540837541
-                    },
-                    {
-                        "begin": 15.904365904366,
-                        "content": "the softer frame.",
-                        "end": 17.615087615088
-                    },
-                    {
-                        "begin": 18.804573804574,
-                        "content": "The trees are humming,",
-                        "end": 20.862785862786
-                    },
-                    {
-                        "begin": 20.969705969706,
-                        "content": "they call my name,",
-                        "end": 22.573507573508
-                    },
-                    {
-                        "begin": 24.083754083754,
-                        "content": "whispering secrets in their playful game.",
-                        "end": 27.652212652213
-                    },
-                    {
-                        "begin": 29.96435996436,
-                        "content": "Sunshine pouring,",
-                        "end": 32.343332343332
-                    },
-                    {
-                        "begin": 32.410157410157,
-                        "content": "golden beams,",
-                        "end": 34.60201960202
-                    },
-                    {
-                        "begin": 34.70893970894,
-                        "content": "life feels lighter,",
-                        "end": 37.154737154737
-                    },
-                    {
-                        "begin": 37.234927234927,
-                        "content": "bursting seams.",
-                        "end": 39.547074547075
-                    },
-                    {
-                        "begin": 39.80100980101,
-                        "content": "Rainbows arching,",
-                        "end": 42.460647460647
-                    },
-                    {
-                        "begin": 42.540837540838,
-                        "content": "colors gleam,",
-                        "end": 44.385209385209
-                    },
-                    {
-                        "begin": 45.10692010692,
-                        "content": "dancing outside, chasing dreams.",
-                        "end": 49.143154143154
-                    },
-                    {
-                        "begin": 49.55746955747,
-                        "content": "🎵🎶🎵🎶🎵🎶🎷🎷🥁🥁🥁",
-                        "end": 52.671517671518
-                    },
-                    {
-                        "begin": 52.738342738343,
-                        "content": "🎷🥁🎵🎶🎷🥁🎵🎶🎷🥁🎵🎶🎷🥁🎵🎶🎷🥁🎵🎶",
-                        "end": 58.752598752599
-                    },
-                    {
-                        "begin": 59.247104247104,
-                        "content": "The forest greets me,",
-                        "end": 60.971190971191
-                    },
-                    {
-                        "begin": 61.064746064746,
-                        "content": "arms out wide,",
-                        "end": 62.534897534898
-                    },
-                    {
-                        "begin": 64.432729432729,
-                        "content": "leaves are rustling, can't hide their pride.",
-                        "end": 67.693792693793
-                    },
-                    {
-                        "begin": 67.132462132462,
-                        "content": "🎷🥁🎵🎶",
-                        "end": 67.720522720523
-                    },
-                    {
-                        "begin": 69.097119097119,
-                        "content": "A symphony",
-                        "end": 71.101871101871
-                    },
-                    {
-                        "begin": 71.208791208791,
-                        "content": "of nature's stride,",
-                        "end": 72.585387585388
-                    },
-                    {
-                        "begin": 73.988713988714,
-                        "content": "guides my feet, I let ça decide.",
-                        "end": 77.623997623998
-                    },
-                    {
-                        "begin": 77.704187704188,
-                        "content": "🎷🥁🎵🎶",
-                        "end": 79.54855954856
-                    },
-                    {
-                        "begin": 79.615384615385,
-                        "content": "Sunshine pouring,",
-                        "end": 82.395307395307
-                    },
-                    {
-                        "begin": 82.462132462132,
-                        "content": "golden beams,",
-                        "end": 84.867834867835
-                    },
-                    {
-                        "begin": 84.96138996139,
-                        "content": "life feels lighter,",
-                        "end": 87.594297594298
-                    },
-                    {
-                        "begin": 87.674487674488,
-                        "content": "bursting seams.",
-                        "end": 89.852984852985
-                    },
-                    {
-                        "begin": 90.093555093555,
-                        "content": "Rainbows arching,",
-                        "end": 91.790911790912
-                    },
-                    {
-                        "begin": 91.857736857737,
-                        "content": "colors gleam,",
-                        "end": 94.437184437184
-                    },
-                    {
-                        "begin": 94.61092961093,
-                        "content": "dancing outside,",
-                        "end": 96.776061776062
-                    },
-                    {
-                        "begin": 96.842886842887,
-                        "content": "chasing dreams.",
-                        "end": 98.780813780814
-                    },
-                    {
-                        "begin": 98.887733887734,
-                        "content": "🎷🥁🎵🎶",
-                        "end": 99.850014850015
-                    },
-                    {
-                        "begin": 100.090585090585,
-                        "content": "Feet there on grass,",
-                        "end": 102.696762696763
-                    },
-                    {
-                        "begin": 102.763587763588,
-                        "content": "it's cool, it's right, it's right,",
-                        "end": 105.11583011583
-                    },
-                    {
-                        "begin": 105.30294030294,
-                        "content": "sky turns to moon, soft twilight.",
-                        "end": 108.737748737749
-                    },
-                    {
-                        "begin": 108.817938817939,
-                        "content": "🎷🥁🎵🎶",
-                        "end": 109.99405999406
-                    },
-                    {
-                        "begin": 110.060885060885,
-                        "content": "Twist et turning,",
-                        "end": 112.266112266112
-                    },
-                    {
-                        "begin": 112.373032373032,
-                        "content": "stars ignite,",
-                        "end": 114.030294030294
-                    },
-                    {
-                        "begin": 114.137214137214,
-                        "content": "this is freedom,",
-                        "end": 116.048411048411
-                    },
-                    {
-                        "begin": 116.128601128601,
-                        "content": "love takes flight.",
-                        "end": 118.053163053163
-                    },
-                    {
-                        "begin": 118.146718146718,
-                        "content": "🎷🥁🎵🎶",
-                        "end": 119.817344817345
-                    },
-                    {
-                        "begin": 119.88416988417,
-                        "content": "Sunshine pouring,",
-                        "end": 122.182952182952
-                    },
-                    {
-                        "begin": 122.249777249777,
-                        "content": "golden beams,",
-                        "end": 124.855954855955
-                    },
-                    {
-                        "begin": 124.92277992278,
-                        "content": "life feels lighter, bursting seams.",
-                        "end": 129.359964359964
-                    },
-                    {
-                        "begin": 129.787644787645,
-                        "content": "Rainbows arching,",
-                        "end": 131.885951885952
-                    },
-                    {
-                        "begin": 132.193347193347,
-                        "content": "colors gleam,",
-                        "end": 134.184734184734
-                    },
-                    {
-                        "begin": 134.505494505495,
-                        "content": "dancing outside,",
-                        "end": 136.670626670627
-                    },
-                    {
-                        "begin": 136.750816750817,
-                        "content": "chasing dreams.",
-                        "end": 139.049599049599
-                    },
-                    {
-                        "begin": 139.143154143154,
-                        "content": "🎷🥁🎵🎶🎷🥁🎵🎶🎷🥁🎵🎶",
-                        "end": 140.640035640036
-                    },
-                    {
-                        "begin": 140.720225720226,
-                        "content": "🎵🎶🎷🥁🎵🎶🎷🥁🎵🎶🎷🥁🎵🎶🎷🥁",
-                        "end": 143.353133353133
-                    },
-                    {
-                        "begin": 143.446688446688,
-                        "content": "🎵🎶🎷🥁🎵🎶🎷🥁",
-                        "end": 144.94356994357
-                    },
-                    {
-                        "begin": 145.037125037125,
-                        "content": "🎵🎶🎷🥁",
-                        "end": 146.534006534007
-                    },
-                    {
-                        "begin": 146.627561627562,
-                        "content": "🎷🥁🎵🎶",
-                        "end": 148.124443124443
-                    },
-                    {
-                        "begin": 158.722898722899,
-                        "content": "Feet there on grass,",
-                        "end": 160.580635580636
-                    },
-                    {
-                        "begin": 160.647460647461,
-                        "content": "it's cool, it's right, it's right,",
-                        "end": 163.119988119988
-                    },
-                    {
-                        "begin": 163.186813186813,
-                        "content": "sky turns to moon,",
-                        "end": 165.886545886546
-                    },
-                    {
-                        "begin": 165.953370953371,
-                        "content": "soft twilight.",
-                        "end": 169.000594000594
-                    },
-                    {
-                        "begin": 169.094149094149,
-                        "content": "Twist et turning, stars ignite,",
-                        "end": 173.103653103653
-                    },
-                    {
-                        "begin": 174.293139293139,
-                        "content": "this is freedom,",
-                        "end": 176.231066231066
-                    },
-                    {
-                        "begin": 176.297891297891,
-                        "content": "love takes flight.",
-                        "end": 178.316008316008
-                    },
-                    {
-                        "begin": 178.382833382833,
-                        "content": "🎵🎶🎷🥁",
-                        "end": 179.91980991981
-                    },
-                    {
-                        "begin": 180.093555093555,
-                        "content": "Sunshine pouring,",
-                        "end": 182.245322245322
-                    },
-                    {
-                        "begin": 182.325512325512,
-                        "content": "golden beams,",
-                        "end": 184.757944757945
-                    },
-                    {
-                        "begin": 184.838134838135,
-                        "content": "life feels lighter,",
-                        "end": 187.136917136917
-                    },
-                    {
-                        "begin": 187.203742203742,
-                        "content": "bursting seams.",
-                        "end": 189.689634689635
-                    },
-                    {
-                        "begin": 189.75645975646,
-                        "content": "Rainbows arching,",
-                        "end": 192.309177309177
-                    },
-                    {
-                        "begin": 192.376002376002,
-                        "content": "colors gleam,",
-                        "end": 194.63468963469
-                    },
-                    {
-                        "begin": 194.728244728245,
-                        "content": "dancing outside, chasing dreams.",
-                        "end": 198.430353430353
-                    },
-                    {
-                        "begin": 198.497178497179,
-                        "content": "🎵🎶🎷🥁",
-                        "end": 200.007425007425
-                    },
-                    {
-                        "begin": 200.087615087615,
-                        "content": "Feet there on grass,",
-                        "end": 201.918621918622
-                    },
-                    {
-                        "begin": 200.221265221265,
-                        "content": "🎵🎶🎷🥁",
-                        "end": 200.929610929611
-                    },
-                    {
-                        "begin": 202.399762399762,
-                        "content": "it's cool, it's right, it's right,",
-                        "end": 204.97920997921
-                    },
-                    {
-                        "begin": 205.259875259875,
-                        "content": "sky turns to moon, soft twilight.",
-                        "end": 208.708048708049
-                    },
-                    {
-                        "begin": 210.09801009801,
-                        "content": "Twist et turning,",
-                        "end": 212.263142263142
-                    },
-                    {
-                        "begin": 212.329967329967,
-                        "content": "stars ignite,",
-                        "end": 214.428274428274
-                    },
-                    {
-                        "begin": 214.535194535195,
-                        "content": "this is freedom,",
-                        "end": 216.192456192456
-                    },
-                    {
-                        "begin": 216.286011286011,
-                        "content": "love takes flight.",
-                        "end": 220.09504009504
-                    }
-                ]
-            },
-            "userId": "VincentGuigui"
-        }
   ScriptTypes:
     "":
       {}
@@ -1522,9 +1226,9 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 3.000000, z: 0.000000}
+    Position: {x: 0.000000, y: 2.500000, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 0.500000, y: 0.500000, z: 0.500000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -1615,6 +1319,24 @@
       onFinishedCallbacks:
         []
       _width: !<float> 1.000000
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/74cba9e3-5e9e-421b-b34b-c3a1daa63d62>
+  PrefabRemaps:
+    []
+  Name: crowded city
+  Enabled: true
+  ScriptAsset: !<reference> 46cb8f1c-5b90-4cf3-a7b9-2159a7d5dc53
+  ScriptInputsDefault:
+    title: true
+    cover: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      title: Crowded City
+      cover: !<reference.Material> 624016e5-fbe9-4f4f-a867-38ce3f441f9f
   ScriptTypes:
     "":
       {}
@@ -1770,6 +1492,53 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/7c6dec6b-d4f8-4de9-8393-fc84bb9c59a6>
+  PrefabRemaps:
+    []
+  Name: crowded city
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 74cba9e3-5e9e-421b-b34b-c3a1daa63d62
+- !<SceneObject/7da5bf2f-6bed-4bc5-8f24-442cfb671f60>
+  PrefabRemaps:
+    []
+  Name: crazy people
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 4a39036e-19d7-40bc-904e-5ebebfc807bb
+- !<ScriptComponent/7eb2a649-4981-4a38-a999-961df310f38d>
+  PrefabRemaps:
+    []
+  Name: light in the night
+  Enabled: true
+  ScriptAsset: !<reference> c281b399-2fd9-4263-a0fc-d1f5229ce559
+  ScriptInputsDefault:
+    cover: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      title: Light int the Night
+      cover: !<reference.Material> 7c7114cd-d306-4a2f-949e-6e4039e7b4a5
+  ScriptTypes:
+    "":
+      {}
 - !<Text/81b8df9d-4327-4b40-8cd7-49d341a2d388>
   PrefabRemaps:
     []
@@ -1910,13 +1679,14 @@
   Enabled: true
   ScriptAsset: !<reference> d4b3d8ef-2c86-4b29-ad6c-a489f59b9538
   ScriptInputsDefault:
+    distanceToLandmark: true
     trackedLandmark: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       handFollowObject: !<reference.SceneObject> 0c199c41-b7b7-400d-95de-4d017670319e
-      distanceToHand: !<float> -2.000000
+      distanceToLandmark: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
       maxHandAngle: !<float> 70.000000
       handTypes: right
       trackedLandmark: palmCenter
@@ -1931,7 +1701,7 @@
   Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
-  VerticalAlignment: Center
+  VerticalAlignment: Bottom
   HorizontalAlignment: Center
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
@@ -1941,15 +1711,15 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 48
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  FontSize: 24
+  Font: !<reference> b06a4d49-868a-43b7-ad1e-fb1be384f123
   LayoutRect:
-    left: -7.500000
-    bottom: -2.250000
-    right: 7.500000
-    top: 2.250000
+    left: -3.000000
+    bottom: 0.000000
+    right: 3.000000
+    top: 0.000000
   OverflowVertical: Overflow
-  OverflowHorizontal: Overflow
+  OverflowHorizontal: Wrap
   Fill: !<TextFill>
     Mode: Solid
     Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
@@ -2005,6 +1775,29 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
+- !<ScriptComponent/889614e3-0b02-446a-b424-bd56d62689b3>
+  PrefabRemaps:
+    []
+  Name: Songs
+  Enabled: true
+  ScriptAsset: !<reference> ac1a5f20-4272-4302-a957-75e711bd5293
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      Songs: !<MappingBased.AssignableType[]>
+        - !<reference> edace526-df50-42c9-948b-50f65f0d8f3e
+        - !<reference> 4a39036e-19d7-40bc-904e-5ebebfc807bb
+        - !<reference> 74cba9e3-5e9e-421b-b34b-c3a1daa63d62
+        - !<reference> 9245e011-4241-4fd8-8c94-4f70e3456203
+        - !<reference> 4bda0ba6-0339-431e-9829-22c50b5a76b8
+        - !<reference> 7eb2a649-4981-4a38-a999-961df310f38d
+        - !<reference> 5922afa5-5a8a-4629-a435-e9a55dbf1469
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/8a0ed451-7a43-4355-834d-eed9bd9acd2d>
   PrefabRemaps:
     []
@@ -2035,6 +1828,54 @@
     - !<own> 104a67a5-312c-42cc-b18c-8ab3c3625a9a
   Components:
     - !<own> b17e7a27-0718-4aab-b0a1-ec963e6cef0a
+- !<SceneObject/8dfa0f91-bffe-4973-837c-c8009f9706b6>
+  PrefabRemaps:
+    []
+  Name: light in the night
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 7eb2a649-4981-4a38-a999-961df310f38d
+- !<SceneObject/8f57bbb5-43b8-47ab-b561-daf28e88a12d>
+  PrefabRemaps:
+    []
+  Name: flying through the sky
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 4bda0ba6-0339-431e-9829-22c50b5a76b8
+- !<ScriptComponent/9245e011-4241-4fd8-8c94-4f70e3456203>
+  PrefabRemaps:
+    []
+  Name: family time
+  Enabled: true
+  ScriptAsset: !<reference> e123d023-ecd0-4e80-80cc-a0d3eb37721d
+  ScriptInputsDefault:
+    title: true
+    cover: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      title: Family Time
+      cover: !<reference.Material> baa12517-dbd6-4e69-b64b-c94c26fe36f4
+  ScriptTypes:
+    "":
+      {}
 - !<ScriptComponent/92c228c3-457c-4e53-bc91-b03d8fb30e78>
   PrefabRemaps:
     []
@@ -2070,7 +1911,7 @@
         []
       onFinishedCallbacks:
         []
-      _width: !<float> 1.000000
+      _width: 1.200000
   ScriptTypes:
     "":
       {}
@@ -2162,7 +2003,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -2.000000, y: 2.000000, z: 1.000000}
+    Position: {x: -2.237908, y: 2.249027, z: 1.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 90.000000}
     Scale: {x: 1.500000, y: 1.500000, z: 1.500000}
     HasSegmentScaleCompensation: false
@@ -2285,13 +2126,13 @@
   Enabled: true
   ScriptAsset: !<reference> d4b3d8ef-2c86-4b29-ad6c-a489f59b9538
   ScriptInputsDefault:
-    {}
+    distanceToLandmark: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       handFollowObject: !<reference.SceneObject> 1933dc36-0a4c-4584-a34d-e3c90100acff
-      distanceToHand: !<float> 0.000000
+      distanceToLandmark: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
       maxHandAngle: !<float> 70.000000
       handTypes: right
       trackedLandmark: ringTip
@@ -2322,13 +2163,13 @@
   Enabled: true
   ScriptAsset: !<reference> d4b3d8ef-2c86-4b29-ad6c-a489f59b9538
   ScriptInputsDefault:
-    {}
+    distanceToLandmark: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       handFollowObject: !<reference.SceneObject> 104a67a5-312c-42cc-b18c-8ab3c3625a9a
-      distanceToHand: !<float> 0.000000
+      distanceToLandmark: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
       maxHandAngle: !<float> 70.000000
       handTypes: right
       trackedLandmark: middleTip
@@ -2517,13 +2358,13 @@
   Enabled: true
   ScriptAsset: !<reference> d4b3d8ef-2c86-4b29-ad6c-a489f59b9538
   ScriptInputsDefault:
-    {}
+    distanceToLandmark: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       handFollowObject: !<reference.SceneObject> bac5bb60-7320-4090-a444-3af344a0c9e1
-      distanceToHand: !<float> 0.000000
+      distanceToLandmark: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
       maxHandAngle: !<float> 70.000000
       handTypes: right
       trackedLandmark: indexTip
@@ -2553,13 +2394,14 @@
   Enabled: true
   ScriptAsset: !<reference> d4b3d8ef-2c86-4b29-ad6c-a489f59b9538
   ScriptInputsDefault:
+    distanceToLandmark: true
     trackedLandmark: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       handFollowObject: !<reference.SceneObject> 9cc9a2f0-94a0-4550-bd72-06bfcbf441d7
-      distanceToHand: !<float> -2.000000
+      distanceToLandmark: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
       maxHandAngle: !<float> 70.000000
       handTypes: right
       trackedLandmark: palmCenter
@@ -2763,13 +2605,13 @@
   Enabled: true
   ScriptAsset: !<reference> d4b3d8ef-2c86-4b29-ad6c-a489f59b9538
   ScriptInputsDefault:
-    {}
+    distanceToLandmark: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       handFollowObject: !<reference.SceneObject> 8a0ed451-7a43-4355-834d-eed9bd9acd2d
-      distanceToHand: -0.700000
+      distanceToLandmark: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
       maxHandAngle: !<float> 70.000000
       handTypes: right
       trackedLandmark: pinkyTip
@@ -2792,6 +2634,24 @@
     - !<own> 1933dc36-0a4c-4584-a34d-e3c90100acff
   Components:
     - !<own> ad81e156-1ea6-45ec-bbaa-468b0c25951e
+- !<ScriptComponent/edace526-df50-42c9-948b-50f65f0d8f3e>
+  PrefabRemaps:
+    []
+  Name: birthday song
+  Enabled: true
+  ScriptAsset: !<reference> 6e229b3e-bf32-429e-b22b-b3575d1ab815
+  ScriptInputsDefault:
+    title: true
+    cover: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      title: Birthday Song
+      cover: !<reference.Material> 3ec34ef3-1e9a-49fc-9d5a-93db8ecd4106
+  ScriptTypes:
+    "":
+      {}
 - !<ScriptComponent/f11ce2c4-0d0a-4fe6-a792-a88cfcca49e3>
   PrefabRemaps:
     []
@@ -2866,7 +2726,7 @@
         []
       onFinishedCallbacks:
         []
-      _width: !<float> 1.000000
+      _width: 1.200000
   ScriptTypes:
     "":
       {}

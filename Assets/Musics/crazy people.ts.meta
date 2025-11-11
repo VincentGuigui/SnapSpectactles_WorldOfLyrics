@@ -1,0 +1,47 @@
+- !<AssetImportMetadata/218bc249-a05f-439d-87db-6aac6fd39ad4>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 778f99f6-6890-424f-907e-6fc95f4b8f54
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 778f99f6-6890-424f-907e-6fc95f4b8f54
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 1e00811b-9bc1-4dde-b252-629d068348ce
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/1e00811b-9bc1-4dde-b252-629d068348ce>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 9519cc6c-4460-49af-addc-cd09dd1c5867
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cover: false
+    title: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - title: Crazy People
+      cover: !<reference.Material> 6f00277b-93ae-4903-891d-9db69e008a0d
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input string title
+    - // @input Asset.Material cover

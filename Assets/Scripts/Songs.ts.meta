@@ -1,0 +1,45 @@
+- !<AssetImportMetadata/6fa56934-20d3-4a77-bfb6-8d62af46b431>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> ac1a5f20-4272-4302-a957-75e711bd5293
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> ac1a5f20-4272-4302-a957-75e711bd5293
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 3ef8f827-cf0b-4a0f-bc70-17d9ef1e7853
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/3ef8f827-cf0b-4a0f-bc70-17d9ef1e7853>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 5ab9eab0-202b-4682-9f0f-f567a12975e2
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    Songs: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - Songs: !<MappingBased.AssignableType[]>
+        []
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - "// @input AssignableType[] Songs"

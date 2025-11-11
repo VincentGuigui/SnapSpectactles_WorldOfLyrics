@@ -29,8 +29,6 @@
     Floor: false
     Hand: false
     Head: false
-    HeadBinding: false
-    Lyrics: false
     Signage: false
     Singing: false
     Sky: false
@@ -47,7 +45,6 @@
     - !<reference> 8c072f67-042a-4e61-8b0c-10ba3010f435
   DefaultScriptInputs:
     - Head: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      HeadBinding: !<reference.Head> 00000000-0000-0000-0000-000000000000
       Hand: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       Thinking: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       Singing: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
@@ -55,13 +52,11 @@
       Wall: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       Signage: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       Sky: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      Lyrics: ""
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input SceneObject Head
-    - // @input Component.Head HeadBinding
     - // @input SceneObject Hand
     - // @input SceneObject Thinking
     - // @input SceneObject Singing
@@ -69,4 +64,3 @@
     - // @input SceneObject Wall
     - // @input SceneObject Signage
     - // @input SceneObject Sky
-    - // @input string Lyrics

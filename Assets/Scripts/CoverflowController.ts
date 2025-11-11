@@ -1,5 +1,7 @@
+import { LyricsData } from './LyricsData';
+import { Song } from './Song';
+import { Songs } from './Songs';
 import { LyricsReader } from './LyricsReader'
-import { ToggleButton } from 'SpectaclesInteractionKit.lspkg/Components/UI/ToggleButton/ToggleButton';
 
 @component
 export class PlayMusic extends BaseScriptComponent {
@@ -8,18 +10,7 @@ export class PlayMusic extends BaseScriptComponent {
   private LyricsReader: LyricsReader
 
   @input
-  private SongTitles: string[] = [
-    "Birthday Song",
-    "Crazy People",
-    "Crowded City",
-    "Family Time",
-    "Flying through the sky",
-    "Light in the Night",
-    "Sunshine Dance"
-  ]
-
-  @input
-  private SongCover: Material[] = []
+  private SongsObject: Songs
 
   @input
   private CurrentSong: number = 1;
@@ -36,13 +27,13 @@ export class PlayMusic extends BaseScriptComponent {
   @input
   private StopButton: SceneObject = undefined
 
-  @input("Component.Image")
+  @input
   private coverImage: Image | undefined
 
-  @input("Component.Text")
+  @input
   private coverTitle: Text | undefined
 
-  @input("Asset.AudioTrackAsset")
+  @input
   private _audioTrackAsset: AudioTrackAsset | undefined
 
   get audioTrackAsset(): AudioTrackAsset | undefined {
@@ -72,13 +63,14 @@ export class PlayMusic extends BaseScriptComponent {
   }
 
   updateCoverFlow() {
-    this.coverTitle.text = this.SongTitles[this.CurrentSong];
-    this.coverImage.mainMaterial = this.SongCover[this.CurrentSong];
+    this.coverTitle.text = this.SongsObject.Songs[this.CurrentSong].title;
+    this.coverImage.mainMaterial = this.SongsObject.Songs[this.CurrentSong].cover;
+    this.LyricsReader.setLyrics(this.SongsObject.Songs[0].lyrics)
   }
 
   next() {
     this.CurrentSong = this.CurrentSong + 1;
-    if (this.CurrentSong > this.SongTitles.length) {
+    if (this.CurrentSong >= this.SongsObject.Songs.length) {
       this.CurrentSong = 0;
     }
     this.updateCoverFlow();
@@ -87,7 +79,7 @@ export class PlayMusic extends BaseScriptComponent {
   previous() {
     this.CurrentSong = this.CurrentSong - 1;
     if (this.CurrentSong < 0) {
-      this.CurrentSong = this.SongTitles.length - 1;
+      this.CurrentSong = this.SongsObject.Songs.length - 1;
     }
     this.updateCoverFlow();
   }

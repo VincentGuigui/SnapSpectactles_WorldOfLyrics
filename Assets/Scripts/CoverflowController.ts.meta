@@ -31,8 +31,7 @@
     PauseMaterial: false
     PlayMaterial: false
     PlayPauseImageButton: false
-    SongCover: false
-    SongTitles: false
+    SongsObject: false
     StopButton: false
     _audioTrackAsset: false
     coverImage: false
@@ -47,10 +46,7 @@
     []
   DefaultScriptInputs:
     - LyricsReader: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
-      SongTitles: !<string[]>
-        []
-      SongCover: !<reference.Material[]>
-        []
+      SongsObject: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
       CurrentSong: !<float> 1.000000
       PlayMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
       PauseMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
@@ -64,8 +60,7 @@
       {}
   InputLines:
     - // @input AssignableType LyricsReader
-    - '// @input string[] SongTitles = {"Birthday Song","Crazy People","Crowded City","Family Time","Flying through the sky","Light in the Night","Sunshine Dance"}'
-    - "// @input Asset.Material[] SongCover = {}"
+    - // @input AssignableType_1 SongsObject
     - // @input float CurrentSong = 1
     - // @input Asset.Material PlayMaterial
     - // @input Asset.Material PauseMaterial

@@ -1,0 +1,47 @@
+- !<AssetImportMetadata/03c3e7d0-f6ce-4096-a6d5-005794c433d4>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> eef15be1-9a47-4428-a76a-8e03230b72a2
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> eef15be1-9a47-4428-a76a-8e03230b72a2
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> f8513b51-df6d-43fd-bd3b-1f6c6588e2f8
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/f8513b51-df6d-43fd-bd3b-1f6c6588e2f8>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: ff4fec2f-cdea-42b1-986c-66691561223a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cover: false
+    title: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - title: Flying Through the sky
+      cover: !<reference.Material> 16748161-7106-4819-afcb-0ad8374628dd
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input string title
+    - // @input Asset.Material cover

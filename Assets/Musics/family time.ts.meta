@@ -1,0 +1,47 @@
+- !<AssetImportMetadata/0ab3bba4-95ff-41d2-93ca-ac0e721af31d>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> e123d023-ecd0-4e80-80cc-a0d3eb37721d
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> e123d023-ecd0-4e80-80cc-a0d3eb37721d
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> bf952ffb-8fdc-46f0-ba37-64593b09a4fb
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/bf952ffb-8fdc-46f0-ba37-64593b09a4fb>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 59728bae-14df-47be-81a7-a3df03522d31
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cover: false
+    title: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - title: Family Time
+      cover: !<reference.Material> baa12517-dbd6-4e69-b64b-c94c26fe36f4
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input string title
+    - // @input Asset.Material cover

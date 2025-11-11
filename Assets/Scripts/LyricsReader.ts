@@ -7,8 +7,6 @@ export class LyricsReader extends BaseScriptComponent {
     @input
     private Head: SceneObject = undefined
     @input
-    private HeadBinding: Head = undefined
-    @input
     private Hand: SceneObject = undefined
     @input
     private Thinking: SceneObject = undefined
@@ -23,8 +21,6 @@ export class LyricsReader extends BaseScriptComponent {
     @input
     private Sky: SceneObject = undefined
 
-    @input Lyrics: string = undefined
-
     _lyricsLocations: SceneObject[]
     _lyrics: LyricsData = undefined
     _startTime: number = 0
@@ -36,13 +32,20 @@ export class LyricsReader extends BaseScriptComponent {
         this._lyricsLocations = [
             this.Hand, this.Thinking, this.Singing, this.Floor, this.Wall, this.Signage, this.Sky
         ]
-
         this.textTemplate = this.sceneObject.getComponent("Component.Text")
         this.setAllTexts(undefined, "Lyrics")
-        this._lyrics = JSON.parse(this.Lyrics)
         this.createEvent("UpdateEvent").bind(() => {
             this.update();
         })
+    }
+
+    setLyricsFromString(lyrics: string){
+        this.setLyrics(JSON.parse(lyrics))
+
+    }
+
+    setLyrics(lyricsData: LyricsData){
+        this._lyrics = lyricsData
     }
 
     setAllTexts(obj: SceneObject = undefined, newText: string) {

@@ -23,31 +23,21 @@ class TimedLyrics {
 // Main class for the entire lyrics JSON object
 export class LyricsData {
     duration_seconds: number;
-    file_generated_timestamp: number;
-    id: number;
     language: string;
-    lyrics_created_timestamp: number;
-    plain: string;
-    songTitle: string;
+    userId: string;
     timed: TimedLyrics;
 
     constructor(
         duration_seconds: number,
-        file_generated_timestamp: number,
-        id: number,
         language: string,
-        lyrics_created_timestamp: number,
-        plain: string,
         songTitle: string,
+        userId: string,
         timed: TimedLyrics
     ) {
         this.duration_seconds = duration_seconds;
-        this.file_generated_timestamp = file_generated_timestamp;
-        this.id = id;
         this.language = language;
-        this.lyrics_created_timestamp = lyrics_created_timestamp;
-        this.plain = plain;
-        this.songTitle = songTitle;
+        this.userId = userId;
         this.timed = timed;
     }
 }
+

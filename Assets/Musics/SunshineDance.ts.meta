@@ -1,0 +1,47 @@
+- !<AssetImportMetadata/e4854ea9-4531-4cd9-8b06-4ebab8a2f99a>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> b9bd1fb7-3c2d-47a1-936d-44cc9860a6a3
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> b9bd1fb7-3c2d-47a1-936d-44cc9860a6a3
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> dd002f30-6bc0-42e2-96d2-ade823fb575b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/dd002f30-6bc0-42e2-96d2-ade823fb575b>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 4081de9d-dbfd-423b-94a5-dcb6209b940b
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cover: false
+    title: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - title: Sunshine Dance
+      cover: !<reference.Material> 90e602e2-f8f9-4988-b841-16f31a06099b
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input string title
+    - // @input Asset.Material cover

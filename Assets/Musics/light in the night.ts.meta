@@ -1,0 +1,47 @@
+- !<AssetImportMetadata/38f03323-9fcd-48e9-b2da-837b84636a1d>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> c281b399-2fd9-4263-a0fc-d1f5229ce559
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> c281b399-2fd9-4263-a0fc-d1f5229ce559
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> a8ca9a3f-47d5-4469-9d05-ad588842caf9
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/a8ca9a3f-47d5-4469-9d05-ad588842caf9>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 815b9bde-19da-4f37-bd70-093acd450b3b
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cover: false
+    title: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - title: Light in the Night
+      cover: !<reference.Material> 7c7114cd-d306-4a2f-949e-6e4039e7b4a5
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input string title
+    - // @input Asset.Material cover

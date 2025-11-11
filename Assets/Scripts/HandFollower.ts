@@ -12,7 +12,7 @@ const HandTypeRight: string = "right"
 @component
 export class HandFollower extends BaseScriptComponent {
     @input private handFollowObject: SceneObject;
-    @input private distanceToHand: number = 10
+    @input private distanceToLandmark: vec3
     @input maxHandAngle: number = 30;
     @input("string")
     @widget(
@@ -57,7 +57,7 @@ export class HandFollower extends BaseScriptComponent {
         ])
     )
     trackedLandmark: string = "palmCenter"
-    
+
     @input viewInEditor: boolean = false
 
     private handProvider: HandInputData = HandInputData.getInstance()
@@ -102,29 +102,21 @@ export class HandFollower extends BaseScriptComponent {
 
 
     private tryShowHandMenu(hand: TrackedHand): boolean {
+        if (!hand.isTracked()) {
+            return false;
+        }
         if (this.handTypes == HandTypeBoth || this.handTypes == hand.handType) {
-            if (!hand.isTracked()) {
+            const landmarkPosition = this.getLandmarkPosition(hand);
+            const knuckleForward = hand.indexKnuckle.forward;
+            const cameraForward = this.camera.getTransform().forward;
+            const angle = Math.acos(knuckleForward.dot(cameraForward) / (knuckleForward.length * cameraForward.length)) * 180.0 / Math.PI;
+            if (Math.abs(angle) > this.maxHandAngle) {
                 return false;
             }
-            const pinkyKnucklePosition = hand.pinkyKnuckle.position;
-            if (pinkyKnucklePosition != null) {
-
-                const knuckleForward = hand.indexKnuckle.forward;
-                const cameraForward = this.camera.getTransform().forward;
-                const angle = Math.acos(knuckleForward.dot(cameraForward) / (knuckleForward.length * cameraForward.length)) * 180.0 / Math.PI;
-                if (Math.abs(angle) > this.maxHandAngle) {
-                    return false;
-                }
-                var directionNextToKnuckle = hand.handType == "left" ? hand.indexKnuckle.right :
-                    hand.indexKnuckle.right.mult(VectorUtils.scalar3(-1));
-
-                this.handFollowObject.getTransform().setWorldRotation(hand.indexKnuckle.rotation);
-                //this.handFollowObject.getTransform().setWorldPosition(
-                //    pinkyKnucklePosition.add(directionNextToKnuckle.mult(VectorUtils.scalar3(this.distanceToHand))));
-                this.handFollowObject.getTransform().setWorldPosition(
-                    this.getLandmarkPosition(hand).add(directionNextToKnuckle.mult(VectorUtils.scalar3(this.distanceToHand))));
-                return true;
-            }
+            var directionToSide = hand.handType == "left" ? VectorUtils.scalar3(1) : VectorUtils.scalar3(-1);
+            this.handFollowObject.getTransform().setWorldRotation(hand.indexKnuckle.rotation);
+            this.handFollowObject.getTransform().setWorldPosition(landmarkPosition.add(directionToSide.mult(this.distanceToLandmark)));
+            return true;
         }
         return false;
     }

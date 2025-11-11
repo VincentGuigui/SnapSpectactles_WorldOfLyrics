@@ -1,0 +1,47 @@
+- !<AssetImportMetadata/a4adc4d4-04dd-4c0a-b443-d8d35b0cec99>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 6e229b3e-bf32-429e-b22b-b3575d1ab815
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 6e229b3e-bf32-429e-b22b-b3575d1ab815
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 8e86f0c8-3849-4dcc-8810-0b15da971298
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/8e86f0c8-3849-4dcc-8810-0b15da971298>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 6c09f657-37e0-4c0e-8b7c-66b84db3bf56
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cover: false
+    title: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - title: Birthday Song
+      cover: !<reference.Material> 3ec34ef3-1e9a-49fc-9d5a-93db8ecd4106
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input string title
+    - // @input Asset.Material cover

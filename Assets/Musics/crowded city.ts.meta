@@ -1,0 +1,47 @@
+- !<AssetImportMetadata/8b0b68ee-b8bf-4bb1-947f-8fd8703d789b>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 46cb8f1c-5b90-4cf3-a7b9-2159a7d5dc53
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 46cb8f1c-5b90-4cf3-a7b9-2159a7d5dc53
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 9a5a1c05-b8a3-4beb-baea-ee36ea0d1b8e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/9a5a1c05-b8a3-4beb-baea-ee36ea0d1b8e>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: d8029ff6-58b0-4d45-ad01-a32531700a6c
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cover: false
+    title: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - title: Crowded City
+      cover: !<reference.Material> 624016e5-fbe9-4f4f-a867-38ce3f441f9f
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input string title
+    - // @input Asset.Material cover

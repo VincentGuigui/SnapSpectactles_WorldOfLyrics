@@ -1,7 +1,16 @@
-{
+import {LyricsData} from '../Scripts/LyricsData'
+import {Song} from '../Scripts/Song'
+
+@component 
+export class SongAndLyrics extends Song {
+    @input 
+    title: "Sunshine Dance"
+    @input
+    cover: Material
+    lyrics: LyricsData  = {
     "duration_seconds": 225,
     "language": "en",
-    "songTitle": "SunshineDance",
+    "userId": "VincentGuigui",
     "timed": {
         "line": [
             {
@@ -395,6 +404,6 @@
                 "end": 220.09504009504
             }
         ]
-    },
-    "userId": "VincentGuigui"
+    }
+}
 }
