@@ -2,17 +2,17 @@ import {LyricsData} from '../Scripts/LyricsData'
 import {Song} from '../Scripts/Song'
 
 @component 
-export class SongAndLyrics extends Song {
+export class LightInTheNight extends Song {
     @input 
-    title: "Crazy People"
+    title: "light in the night"
     @input
     cover: Material
-    lyrics: LyricsData  = {
+    lyrics: LyricsData = {
     "duration_seconds": 225,
     "language": "en",
     "userId": "VincentGuigui",
     "timed": {
         "line": []
-    }
+    } 
 }
 }

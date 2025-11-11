@@ -13,7 +13,7 @@ export class PlayMusic extends BaseScriptComponent {
   private SongsObject: Songs
 
   @input
-  private CurrentSong: number = 1;
+  private CurrentSong: number = 1
 
   @input
   private PlayMaterial: Material = undefined
@@ -34,19 +34,7 @@ export class PlayMusic extends BaseScriptComponent {
   private coverTitle: Text | undefined
 
   @input
-  private _audioTrackAsset: AudioTrackAsset | undefined
-
-  get audioTrackAsset(): AudioTrackAsset | undefined {
-    return this._audioTrackAsset
-  }
-  set audioTrackAsset(track: AudioTrackAsset) {
-    this._audioTrackAsset = track
-
-    if (this._audioComponent !== undefined) {
-      this._audioComponent.audioTrack = track
-    }
-  }
-
+  @allowUndefined
   private _audioComponent: AudioComponent | undefined
   private _state = "stopped";
 
@@ -54,19 +42,24 @@ export class PlayMusic extends BaseScriptComponent {
     this.createEvent('OnStartEvent').bind(() => {
       this.onStart();
     });
+
   }
 
   onStart() {
-    this._audioComponent = this.getSceneObject().createComponent("Component.AudioComponent") as AudioComponent
     this._audioComponent.setOnFinish((audioComponent)=>{this.stop()})
     this._audioComponent.playbackMode = Audio.PlaybackMode.LowLatency
     this.updateCoverFlow();
   }
 
   updateCoverFlow() {
-    this.coverTitle.text = this.SongsObject.Songs[this.CurrentSong].title;
-    this.coverImage.mainMaterial = this.SongsObject.Songs[this.CurrentSong].cover;
-    this.LyricsReader.setLyrics(this.SongsObject.Songs[0].lyrics)
+    var sunshineDanceIndex = 6
+    this.coverTitle.text = this.SongsObject.Songs[this.CurrentSong].title
+    this.coverImage.mainMaterial = this.SongsObject.Songs[this.CurrentSong].cover
+    this.LyricsReader.setLyrics(this.SongsObject.Songs[sunshineDanceIndex].lyrics)
+    if (this._audioComponent !== undefined) {
+      var track:AudioTrackAsset = this.SongsObject.Songs[sunshineDanceIndex].track
+      this._audioComponent.audioTrack = track as AudioTrackAsset
+    }
   }
 
   next() {
@@ -78,9 +71,9 @@ export class PlayMusic extends BaseScriptComponent {
   }
 
   previous() {
-    this.CurrentSong = this.CurrentSong - 1;
+    this.CurrentSong = this.CurrentSong - 1
     if (this.CurrentSong < 0) {
-      this.CurrentSong = this.SongsObject.Songs.length - 1;
+      this.CurrentSong = this.SongsObject.Songs.length - 1
     }
     this.updateCoverFlow();
   }
@@ -91,19 +84,17 @@ export class PlayMusic extends BaseScriptComponent {
       this.PlayPauseImageButton.mainMaterial = this.PlayMaterial
       this._audioComponent.pause()
       this.LyricsReader.pause()
-      this._state = "paused";
+      this._state = "paused"
     } else {
+      this.PlayPauseImageButton.mainMaterial = this.PauseMaterial
       if (this._state == "stopped") {
-        this._audioComponent.audioTrack = this._audioTrackAsset
-        this.PlayPauseImageButton.mainMaterial = this.PauseMaterial
         this._audioComponent.play(-1)
       }
       if (this._state == "paused") {
-        this.PlayPauseImageButton.mainMaterial = this.PauseMaterial
         this._audioComponent.resume()
       }
       this.LyricsReader.start()
-      this._state = "playing";
+      this._state = "playing"
       this.StopButton.enabled = true
     }
   }
@@ -112,7 +103,8 @@ export class PlayMusic extends BaseScriptComponent {
     this._audioComponent.stop(true)
     this.LyricsReader.stop()
     this.StopButton.enabled = false
-    this._state = "stopped";
+    this.PlayPauseImageButton.mainMaterial = this.PlayMaterial
+    this._state = "stopped"
   }
 
 }

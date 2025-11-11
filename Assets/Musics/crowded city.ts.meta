@@ -28,6 +28,7 @@
   ScriptInputsHidden:
     cover: false
     title: false
+    track: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -37,11 +38,13 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - title: Crowded City
+    - track: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      title: Crowded City
       cover: !<reference.Material> 624016e5-fbe9-4f4f-a867-38ce3f441f9f
   ScriptTypes:
     -
       {}
   InputLines:
+    - // @input Asset.AudioTrackAsset track
     - // @input string title
     - // @input Asset.Material cover

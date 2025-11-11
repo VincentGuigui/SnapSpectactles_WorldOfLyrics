@@ -12,6 +12,7 @@ export class SongAndLyrics extends Song {
     "language": "en",
     "userId": "VincentGuigui",
     "timed": {
+        // using DistroKid format : https://distrokid.com/potatoai/done/?id=85068
         "line": [
             {
                 "begin": 9.088209088209,
@@ -405,5 +406,5 @@ export class SongAndLyrics extends Song {
             }
         ]
     }
-}
+}       
 }

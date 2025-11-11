@@ -28,6 +28,7 @@
   ScriptInputsHidden:
     cover: false
     title: false
+    track: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -37,11 +38,13 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - title: Flying Through the sky
+    - track: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      title: Flying Through the sky
       cover: !<reference.Material> 16748161-7106-4819-afcb-0ad8374628dd
   ScriptTypes:
     -
       {}
   InputLines:
+    - // @input Asset.AudioTrackAsset track
     - // @input string title
     - // @input Asset.Material cover

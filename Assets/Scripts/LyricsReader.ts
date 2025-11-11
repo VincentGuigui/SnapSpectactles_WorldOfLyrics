@@ -39,13 +39,9 @@ export class LyricsReader extends BaseScriptComponent {
         })
     }
 
-    setLyricsFromString(lyrics: string){
-        this.setLyrics(JSON.parse(lyrics))
-
-    }
-
-    setLyrics(lyricsData: LyricsData){
+    setLyrics(lyricsData: LyricsData) {
         this._lyrics = lyricsData
+        console.log("LyricsData", lyricsData.userId, lyricsData.timed.line.length)
     }
 
     setAllTexts(obj: SceneObject = undefined, newText: string) {
@@ -85,7 +81,12 @@ export class LyricsReader extends BaseScriptComponent {
     }
 
     update() {
-        if (this._state == "stopped") return
+        if (this._state == "stopped") {
+            this.Singing.enabled = false
+            this.Thinking.enabled = false
+            this.Hand.enabled = false
+            return
+        }
 
         var headIsVisible = this.Head.isEnabledInHierarchy
         if (!headIsVisible) {
@@ -111,11 +112,15 @@ export class LyricsReader extends BaseScriptComponent {
 
     displayLyrics() {
         this._currentPosition = getTime() - this._startTime
-        for (var l = 0; l < this._lyrics.timed.line.length; l++) {
-            var line = this._lyrics.timed.line[l]
-            if (line.begin < this._currentPosition && this._currentPosition < line.end) {
-                this.setAllTexts(undefined, line.content)
-                return;
+        if (this._currentPosition < this._lyrics.timed.line[0].begin)
+            this.setAllTexts(undefined, "...")
+        else {
+            for (var l = 0; l < this._lyrics.timed.line.length; l++) {
+                var line = this._lyrics.timed.line[l]
+                if (line.begin < this._currentPosition && this._currentPosition < line.end) {
+                    this.setAllTexts(undefined, line.content)
+                    return;
+                }
             }
         }
     }

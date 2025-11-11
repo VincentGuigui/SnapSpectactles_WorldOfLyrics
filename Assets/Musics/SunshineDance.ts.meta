@@ -28,6 +28,7 @@
   ScriptInputsHidden:
     cover: false
     title: false
+    track: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -37,11 +38,13 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - title: Sunshine Dance
+    - track: !<reference.AudioTrackAsset> 6058c80b-062e-49a5-88d6-0b8799ddd91f
+      title: Sunshine Dance
       cover: !<reference.Material> 90e602e2-f8f9-4988-b841-16f31a06099b
   ScriptTypes:
     -
       {}
   InputLines:
+    - // @input Asset.AudioTrackAsset track
     - // @input string title
     - // @input Asset.Material cover

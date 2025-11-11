@@ -28,6 +28,7 @@
   ScriptInputsHidden:
     cover: false
     title: false
+    track: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -37,11 +38,13 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - title: Birthday Song
+    - track: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      title: Birthday Song
       cover: !<reference.Material> 3ec34ef3-1e9a-49fc-9d5a-93db8ecd4106
   ScriptTypes:
     -
       {}
   InputLines:
+    - // @input Asset.AudioTrackAsset track
     - // @input string title
     - // @input Asset.Material cover

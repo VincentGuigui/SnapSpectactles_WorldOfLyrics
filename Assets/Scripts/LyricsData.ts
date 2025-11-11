@@ -27,17 +27,5 @@ export class LyricsData {
     userId: string;
     timed: TimedLyrics;
 
-    constructor(
-        duration_seconds: number,
-        language: string,
-        songTitle: string,
-        userId: string,
-        timed: TimedLyrics
-    ) {
-        this.duration_seconds = duration_seconds;
-        this.language = language;
-        this.userId = userId;
-        this.timed = timed;
-    }
 }
 

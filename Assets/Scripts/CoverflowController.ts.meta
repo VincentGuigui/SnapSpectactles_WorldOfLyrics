@@ -33,7 +33,7 @@
     PlayPauseImageButton: false
     SongsObject: false
     StopButton: false
-    _audioTrackAsset: false
+    _audioComponent: false
     coverImage: false
     coverTitle: false
   ScriptTypesHidden:
@@ -54,7 +54,7 @@
       StopButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       coverImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
       coverTitle: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      _audioTrackAsset: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      _audioComponent: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -68,4 +68,4 @@
     - // @input SceneObject StopButton
     - // @input Component.Image coverImage
     - // @input Component.Text coverTitle
-    - // @input Asset.AudioTrackAsset _audioTrackAsset
+    - // @input Component.AudioComponent _audioComponent

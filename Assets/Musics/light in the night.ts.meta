@@ -28,6 +28,7 @@
   ScriptInputsHidden:
     cover: false
     title: false
+    track: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -37,11 +38,13 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - title: Light in the Night
+    - track: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      title: Light in the Night
       cover: !<reference.Material> 7c7114cd-d306-4a2f-949e-6e4039e7b4a5
   ScriptTypes:
     -
       {}
   InputLines:
+    - // @input Asset.AudioTrackAsset track
     - // @input string title
     - // @input Asset.Material cover

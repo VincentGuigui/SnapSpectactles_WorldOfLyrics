@@ -28,6 +28,7 @@
   ScriptInputsHidden:
     cover: false
     title: false
+    track: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -39,9 +40,11 @@
   DefaultScriptInputs:
     - title: ""
       cover: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      track: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input string title
     - // @input Asset.Material cover
+    - // @input Asset.AudioTrackAsset track

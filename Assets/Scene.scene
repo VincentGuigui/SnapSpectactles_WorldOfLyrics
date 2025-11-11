@@ -84,57 +84,8 @@
     HasSegmentScaleCompensation: false
   Children:
     - !<own> 00056e79-b066-62ca-0000-000000001406
-    - !<own> 0005641c-028d-4630-0000-000000014b56
   Components:
     []
-- !<SceneObject/0005641c-028d-4630-0000-000000014b56>
-  PrefabRemaps:
-    []
-  Name: Light
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 40.000000, y: 85.000000, z: 20.000000}
-    Rotation: {x: 70.000000, y: 10.000000, z: 150.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 0005641c-028d-463e-0000-000000014b59
-- !<LightSource/0005641c-028d-463e-0000-000000014b59>
-  PrefabRemaps:
-    []
-  Name: Light Source
-  Enabled: true
-  renderLayer: 1835007
-  LightType: Directional
-  Intensity: 1.000000
-  CastShadows: false
-  ShadowDensity: 0.440000
-  ShadowBlurRadius: 4.000000
-  ShadowTextureSize: 512
-  AutoLightSourcePosition: true
-  AutoShadowFrustumSize: true
-  AutoShadowFrustumSizeExtend: 2.000000
-  ShadowFrustumSize: 30.000000
-  ShadowFrustumNearClipPlane: 1.000000
-  ShadowFrustumFarClipPlane: 1000.000000
-  UseEnvMapFromCamera: false
-  EnvMapFromCameraMode: Auto
-  EstimationSharpness: 1.000000
-  EnvMapExposure: 1.000000
-  EnvMapRotation: 0.000000
-  DiffuseEnvTexture: !<reference> 00000000-0000-0000-0000-000000000000
-  SpecularEnvTexture: !<reference> 00000000-0000-0000-0000-000000000000
-  Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
-  DynamicEnvInputTexture: !<reference> 00000000-0000-0000-0000-000000000000
-  InnerConeAngle: 0.000000
-  OuterConeAngle: 45.000000
-  DecayType: None
-  DecayLimit: false
-  DecayRange: 40.000000
 - !<SceneObject/00056e79-b066-62ca-0000-000000001406>
   PrefabRemaps:
     []
@@ -414,7 +365,7 @@
       StopButton: !<reference.SceneObject> 9a38f28e-4b0b-435b-971e-0c20b3138223
       coverImage: !<reference.Image> b5862e59-dc12-439b-86fc-8c72671ba0b4
       coverTitle: !<reference.Text> 883e861a-667f-447d-9279-154d1b0c0888
-      _audioTrackAsset: !<reference.AudioTrackAsset> 6058c80b-062e-49a5-88d6-0b8799ddd91f
+      _audioComponent: !<reference.AudioComponent> bd8e7a33-802a-46e7-8ade-91747408f3b8
   ScriptTypes:
     "":
       {}
@@ -511,6 +462,7 @@
     - !<own> 1ba6409b-f884-444c-a8e4-01bf461f17a9
     - !<own> 680b0433-53db-4074-b014-d36f7c540465
     - !<own> 44fff374-2de1-4a25-883b-81b64cb3b684
+    - !<own> bd8e7a33-802a-46e7-8ade-91747408f3b8
 - !<ScriptComponent/2aa88910-3dfa-4e51-ac61-81a6a972c028>
   PrefabRemaps:
     []
@@ -883,12 +835,14 @@
   Enabled: true
   ScriptAsset: !<reference> 778f99f6-6890-424f-907e-6fc95f4b8f54
   ScriptInputsDefault:
+    track: true
     title: true
     cover: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
+      track: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
       title: Crazy People
       cover: !<reference.Material> 6f00277b-93ae-4903-891d-9db69e008a0d
   ScriptTypes:
@@ -901,12 +855,14 @@
   Enabled: true
   ScriptAsset: !<reference> eef15be1-9a47-4428-a76a-8e03230b72a2
   ScriptInputsDefault:
+    track: true
     title: true
     cover: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
+      track: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
       title: Flying Through the sky
       cover: !<reference.Material> 16748161-7106-4819-afcb-0ad8374628dd
   ScriptTypes:
@@ -917,7 +873,7 @@
     []
   Name: Device Tracking
   Enabled: true
-  DeviceTrackingMode: Surface
+  DeviceTrackingMode: World
   RotationOptions: !<RotationOptions>
     InvertRotation: false
   SurfaceOptions: !<SurfaceOptions>
@@ -1131,12 +1087,14 @@
   Enabled: true
   ScriptAsset: !<reference> b9bd1fb7-3c2d-47a1-936d-44cc9860a6a3
   ScriptInputsDefault:
+    track: true
     title: true
     cover: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
+      track: !<reference.AudioTrackAsset> 6058c80b-062e-49a5-88d6-0b8799ddd91f
       title: Sunshine Dance
       cover: !<reference.Material> 90e602e2-f8f9-4988-b841-16f31a06099b
   ScriptTypes:
@@ -1329,12 +1287,14 @@
   Enabled: true
   ScriptAsset: !<reference> 46cb8f1c-5b90-4cf3-a7b9-2159a7d5dc53
   ScriptInputsDefault:
+    track: true
     title: true
     cover: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
+      track: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
       title: Crowded City
       cover: !<reference.Material> 624016e5-fbe9-4f4f-a867-38ce3f441f9f
   ScriptTypes:
@@ -1492,12 +1452,14 @@
   Enabled: true
   ScriptAsset: !<reference> c281b399-2fd9-4263-a0fc-d1f5229ce559
   ScriptInputsDefault:
+    track: true
     title: true
     cover: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
+      track: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
       title: Light in the Night
       cover: !<reference.Material> 7c7114cd-d306-4a2f-949e-6e4039e7b4a5
   ScriptTypes:
@@ -1829,12 +1791,14 @@
   Enabled: true
   ScriptAsset: !<reference> e123d023-ecd0-4e80-80cc-a0d3eb37721d
   ScriptInputsDefault:
+    track: true
     title: true
     cover: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
+      track: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
       title: Family Time
       cover: !<reference.Material> baa12517-dbd6-4e69-b64b-c94c26fe36f4
   ScriptTypes:
@@ -1964,12 +1928,12 @@
   PrefabRemaps:
     []
   Name: Stop
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -2.237908, y: 2.249027, z: 1.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 90.000000}
-    Scale: {x: 1.500000, y: 1.500000, z: 1.500000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.500000, y: 1.500000, z: 0.100000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -2210,6 +2174,23 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<AudioComponent/bd8e7a33-802a-46e7-8ade-91747408f3b8>
+  PrefabRemaps:
+    []
+  Name: Audio
+  Enabled: true
+  AudioTrack: !<reference> 6058c80b-062e-49a5-88d6-0b8799ddd91f
+  EnableAutoplayLoop: false
+  Volume: 1.000000
+  EnableMixToSnap: false
+  RecordVolume: 1.000000
+  EnableSpatialAudio: false
+  EnableDistanceEffect: false
+  CurveType: Logarithm
+  MinDistance: 0.000000
+  MaxDistance: 100.000000
+  EnableDirectivityEffect: false
+  EnablePositionEffect: false
 - !<ScriptComponent/bf43c3b5-0324-4673-8d77-b1fa9380585c>
   PrefabRemaps:
     []
@@ -2605,12 +2586,14 @@
   Enabled: true
   ScriptAsset: !<reference> 6e229b3e-bf32-429e-b22b-b3575d1ab815
   ScriptInputsDefault:
+    track: true
     title: true
     cover: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
+      track: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
       title: Birthday Song
       cover: !<reference.Material> 3ec34ef3-1e9a-49fc-9d5a-93db8ecd4106
   ScriptTypes:
