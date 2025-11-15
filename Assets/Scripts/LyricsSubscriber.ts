@@ -3,16 +3,16 @@ import { LyricsData } from './LyricsData'
 @component
 export class LyricsSubscriber extends BaseScriptComponent {
 
-    @input 
-    lyricsOffset:0
+    @input
+    lyricsOffset: 0
 
     onAwake() {
 
     }
 
-    setLyrics(lyrics:LyricsData, current:number, template: Text){
+    setLyrics(lyrics: LyricsData, current: number, template: Text) {
         var lyric = this.findLyric(lyrics, current);
-         // Check for Text (2D) component
+        // Check for Text (2D) component
         var text2D = this.sceneObject.getComponent("Component.Text") as Text;
         if (text2D) {
             text2D.textFill = template.textFill
@@ -25,7 +25,8 @@ export class LyricsSubscriber extends BaseScriptComponent {
         }
     }
 
-    private findLyric(lyrics:LyricsData, current:number) : string {
+    private findLyric(lyrics: LyricsData, current: number): string {
+        if (lyrics == null) return ""
         current = current + this.lyricsOffset
         if (this.lyricsOffset < 0 && current < 0)
             return ""

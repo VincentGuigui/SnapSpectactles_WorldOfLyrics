@@ -52,6 +52,7 @@ export class CoverflowController extends BaseScriptComponent {
   }
 
   updateCoverFlow() {
+    this.stop()
     var sunshineDanceIndex = 6
     this.coverTitle.text = this.SongsObject.Songs[this.CurrentSong].title
     this.coverImage.mainMaterial = this.SongsObject.Songs[this.CurrentSong].cover

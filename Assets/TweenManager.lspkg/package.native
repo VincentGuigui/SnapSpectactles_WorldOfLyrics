@@ -1,0 +1,82 @@
+- !<NativePackageDescriptor/4f41c0c3-c0f0-4b48-85d4-b794f48f6cbb>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 15
+    patch: 0
+    build: 25101318
+    type: Unset
+    buildFlavor: ""
+    timestamp: 0
+    commit: ""
+  Description: "Tween.js is a JavaScript tweening engine for creating simple programmatic animations. It’s an open source JavaScript library created by Sole and can be easily integrated into your Lens Studio project. We've created a convenient importable object that automatically includes Tween.js into your project. Additionally, in includes a Lens Studio specific wrapper called TweenManager and a number of Lens Studio specific TweenType scripts which can be tuned in the Inspector panel."
+  SvgIcon: |
+    <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_0_3)">
+    <mask id="mask0_0_3" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="41" y="6" width="429" height="499">
+    <path d="M342.196 504.422C271.974 504.422 214.843 447.292 214.843 377.069V134.22C214.843 109.469 194.711 89.3364 169.96 89.3364H169.269C144.518 89.3364 124.386 109.469 124.386 134.22V463.187C124.386 485.959 105.923 504.422 83.1513 504.422C60.3796 504.422 41.917 485.959 41.917 463.187V134.22C41.917 63.9979 99.0471 6.86774 169.269 6.86774H169.96C240.182 6.86774 297.312 63.9979 297.312 134.22V377.069C297.312 401.82 317.445 421.953 342.196 421.953C366.946 421.953 387.079 401.82 387.079 377.069V221.709C387.079 198.937 405.542 180.475 428.313 180.475C451.085 180.475 469.548 198.937 469.548 221.709V377.069C469.548 447.292 412.418 504.422 342.196 504.422Z" fill="white"/>
+    </mask>
+    <g mask="url(#mask0_0_3)">
+    <path d="M-194.233 -315.806L859.308 737.735L908.752 688.292L-144.79 -365.25L-194.233 -315.806Z" fill="#5ECCF2"/>
+    <path d="M-251.211 -259.414L802.331 794.128L851.774 744.684L-201.767 -308.857L-251.211 -259.414Z" fill="#9DC679"/>
+    <path d="M-308.188 -203.021L745.353 850.52L794.796 801.077L-258.745 -252.465L-308.188 -203.021Z" fill="#FDCB3E"/>
+    <path d="M-365.166 -146.629L688.375 906.913L737.819 857.469L-315.723 -196.072L-365.166 -146.629Z" fill="#EF8F5A"/>
+    <path d="M-421.772 -90.4567L631.769 963.085L681.214 913.64L-372.328 -139.901L-421.772 -90.4567Z" fill="#F3575A"/>
+    <path d="M-137.509 -372.456L910.604 686.486L960.302 637.298L-87.8114 -421.643L-137.509 -372.456Z" fill="#B96DA7"/>
+    <path d="M-477.634 -32.3407L575.908 1021.2L625.352 971.756L-428.189 -81.7852L-477.634 -32.3407Z" fill="#E86C9D"/>
+    </g>
+    <circle cx="430.5" cy="88.5" r="44.5" fill="white"/>
+    </g>
+    <defs>
+    <clipPath id="clip0_0_3">
+    <rect width="512" height="512" fill="white"/>
+    </clipPath>
+    </defs>
+    </svg>
+
+  SetupScript:
+    code: |-
+      // This script is used to automatically instantiate tween prefabs in the scene when the asset is added to the project.
+      
+      return function instantiate(asset, scene, target, setupScriptInterface) {
+          try {
+              let assetManager = setupScriptInterface.getAssetManager();
+              let scene = setupScriptInterface.getScene();
+              let utils = setupScriptInterface.getUtils()
+      
+              let tweenManagerPrefabFile = asset.fileMeta.sourcePath.parent.appended('TweenManager__PLACE_IN_SCENE.prefab');
+              const tweenManagerPrefab = assetManager.getFileMeta(tweenManagerPrefabFile).primaryAsset;
+              let tweenManagerSceneObject = scene.instantiatePrefab(tweenManagerPrefab, null);
+              scene.reparentSceneObject(tweenManagerSceneObject,null,0)
+      
+              let tweenExamplePrefabFile = asset.fileMeta.sourcePath.parent.appended('Tween Examples [REMOVE_ME]__PUT_IN_ORTHO_CAM.prefab');
+              const tweenExamplePrefab = assetManager.getFileMeta(tweenExamplePrefabFile).primaryAsset;
+              let tweenExampleSceneObject = scene.instantiatePrefab(tweenExamplePrefab, null);
+              utils.addToOrthoCamera(scene,tweenExampleSceneObject);
+      
+          } catch (e) {
+              console.log(e, "Couldn't add asset to scene automatically, please add prefab to scene")
+          }
+      }
+  VersionMajor: 1
+  VersionMinor: 2
+  VersionPatch: 0
+  UpdateCheckpoint: 76
+  ExportUid: 40e5fba5-ce26-4fbd-bd2c-633aa0526483
+  ComponentUid: 7331d46e-2ada-4972-8493-b4a503928570
+  PackagePolicy: CanBeUnpackedTransparent
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: ""
+    AssetId: ""
+    Hash: ""
+    Version:
+      major: 0
+      minor: 0
+      patch: 0
+      build: 0

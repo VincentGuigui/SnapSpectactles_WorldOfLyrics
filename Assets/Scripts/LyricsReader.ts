@@ -1,7 +1,6 @@
 import { LyricsData } from './LyricsData'
 import { LyricsSubscriber } from './LyricsSubscriber'
 import { Song } from './Song'
-import { findComponentInChildren } from 'SpectaclesInteractionKit.lspkg/Utils/SceneObjectUtils'
 
 @component
 export class LyricsReader extends BaseScriptComponent {
