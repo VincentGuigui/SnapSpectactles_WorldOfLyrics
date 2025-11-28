@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\dev_factory\\XR\\Snapchat\\LyricsEverywhere\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev_factory\\XR\\Snapchat\\LyricsEverywhere\\Assets\\Scripts\\SpawnAroundIfOutOfRange.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\SpawnAroundIfOutOfRange.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev_factory\\XR\\Snapchat\\LyricsEverywhere\\Assets\\Scripts\\SpawnerOutOfRange.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\SpawnerOutOfRange.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SpawnAroundIfOutOfRange.ts",
+              "DocumentMoniker": "C:\\dev_factory\\XR\\Snapchat\\LyricsEverywhere\\Assets\\Scripts\\SpawnAroundIfOutOfRange.ts",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SpawnAroundIfOutOfRange.ts",
+              "ToolTip": "C:\\dev_factory\\XR\\Snapchat\\LyricsEverywhere\\Assets\\Scripts\\SpawnAroundIfOutOfRange.ts",
+              "RelativeToolTip": "Assets\\Scripts\\SpawnAroundIfOutOfRange.ts",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAQwGsAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-28T16:36:57.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SpawnerOutOfRange.ts",
+              "DocumentMoniker": "C:\\dev_factory\\XR\\Snapchat\\LyricsEverywhere\\Assets\\Scripts\\SpawnerOutOfRange.ts",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SpawnerOutOfRange.ts",
+              "ToolTip": "C:\\dev_factory\\XR\\Snapchat\\LyricsEverywhere\\Assets\\Scripts\\SpawnerOutOfRange.ts",
+              "RelativeToolTip": "Assets\\Scripts\\SpawnerOutOfRange.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-11-28T16:36:45.777Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

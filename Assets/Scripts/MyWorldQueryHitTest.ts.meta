@@ -27,6 +27,7 @@
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     filter: false
+    printDebug: false
     surfaceClassification: false
   ScriptTypesHidden:
     {}
@@ -39,9 +40,11 @@
   DefaultScriptInputs:
     - surfaceClassification: false
       filter: false
+      printDebug: false
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input bool surfaceClassification
     - // @input bool filter
+    - // @input bool printDebug

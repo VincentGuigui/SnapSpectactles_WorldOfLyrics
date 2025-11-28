@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/c1679c5a-c1a3-4400-b3c1-9f20bc5fd3c7>
+- !<AssetImportMetadata/729f638e-a455-4d54-976a-3e4c8bf7a4f4>
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 4860dc99-6b89-4fc2-9453-d4f2be69bd47
+    TypeScriptAsset: !<reference> d21c58a2-87f9-4ff1-8fb2-7fcdd1f7fe7a
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 4860dc99-6b89-4fc2-9453-d4f2be69bd47
+  PrimaryAsset: !<reference> d21c58a2-87f9-4ff1-8fb2-7fcdd1f7fe7a
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
-    TypeScriptAsset: !<own> 301e2711-0b20-451d-a8ce-f08bec24552a
+    TypeScriptAsset: !<own> 29f07883-f8ac-4d70-b1db-ceffc439bfdd
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<TypeScriptAssetData/301e2711-0b20-451d-a8ce-f08bec24552a>
+- !<TypeScriptAssetData/29f07883-f8ac-4d70-b1db-ceffc439bfdd>
   SvgIcon: ""
   SetupScript:
     code: ""
@@ -22,13 +22,16 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 0f5967cf-a8fd-4126-adf5-edb40dc17a3f
+  ComponentUid: 7911fb8f-f043-4ac4-9b92-f37b27d8c29e
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
+    changeDistance: false
     customSpawn: false
+    distanceRange: false
     objectToSpawn: false
     printDebug: false
+    referenceObject: false
     spawnOnLateUpdate: false
     transitionDuration: false
   ScriptTypesHidden:
@@ -45,6 +48,9 @@
       transitionDuration: !<float> 2000.000000
       customSpawn: false
       spawnOnLateUpdate: false
+      referenceObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      changeDistance: true
+      distanceRange: !<Vec2> {x: 0.000000, y: 0.000000}
   ScriptTypes:
     -
       {}
@@ -54,3 +60,6 @@
     - // @input float transitionDuration = 2000
     - '// @input bool customSpawn {"hint":"Call to Spawn method will be done by code"}'
     - // @input bool spawnOnLateUpdate
+    - // @input SceneObject referenceObject
+    - '// @input bool changeDistance = true {"hint":"Relative to referenceObject position"}'
+    - '// @input vec2 distanceRange = {100,100} {"showIf":"changeDistance", "showIfValue":true}'

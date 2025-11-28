@@ -1,0 +1,50 @@
+- !<AssetImportMetadata/53efc4e0-1e3a-4838-97c3-a11c7c95666f>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> ac308ae9-230b-4271-a2f6-00ebe67bc440
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> ac308ae9-230b-4271-a2f6-00ebe67bc440
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 4b5a81b7-1b6c-40fa-b1ca-57615b6644f8
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/4b5a81b7-1b6c-40fa-b1ca-57615b6644f8>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: f69bb586-4673-4c91-97bb-dbba81e83a25
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    hideWhenNotPlaced: false
+    objectToPlace: false
+    worldHitTest: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - objectToPlace: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      hideWhenNotPlaced: true
+      worldHitTest: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject objectToPlace
+    - // @input bool hideWhenNotPlaced = true
+    - // @input AssignableType worldHitTest

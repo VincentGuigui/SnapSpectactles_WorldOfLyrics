@@ -26,9 +26,13 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
-    notified: false
+    customSpawn: false
+    objectToSpawn: false
     placeholder: false
-    targetObject: false
+    printDebug: false
+    spawnOnLateUpdate: false
+    toNotify: false
+    transitionDuration: false
     worldHitTest: false
   ScriptTypesHidden:
     {}
@@ -39,15 +43,23 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - worldHitTest: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
-      targetObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+    - objectToSpawn: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      printDebug: false
+      transitionDuration: !<float> 2000.000000
+      customSpawn: false
+      spawnOnLateUpdate: false
+      worldHitTest: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       placeholder: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      notified: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      toNotify: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
+    - // @input SceneObject objectToSpawn
+    - // @input bool printDebug
+    - // @input float transitionDuration = 2000
+    - '// @input bool customSpawn {"hint":"Call to Spawn method will be done by code"}'
+    - // @input bool spawnOnLateUpdate
     - // @input AssignableType worldHitTest
-    - // @input SceneObject targetObject
     - // @input SceneObject placeholder
-    - // @input AssignableType_1 notified
+    - // @input AssignableType_1 toNotify

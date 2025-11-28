@@ -3,7 +3,6 @@ import { LyricsData } from './LyricsData'
 import { LYRICS_STOP, LYRICS_STOP_DIRTY, LYRICS_WAITING, LYRICS_PAUSE } from './LyricsStates'
 import { LyricsSubscriber } from './LyricsSubscriber'
 import { findAllComponentsInChildren } from "SpectaclesInteractionKit.lspkg/Utils/SceneObjectUtils"
-import WorldCameraFinderProvider from 'SpectaclesInteractionKit.lspkg/Providers/CameraProvider/WorldCameraFinderProvider'
 import Easing from 'LSTween.lspkg/TweenJS/Easing'
 
 @component
@@ -65,7 +64,7 @@ export class LyricsDistributor extends LyricsSubscriber {
         }
     }
 
-    override setEnable(enable:boolean) {
+    override setEnable(enable:boolean) {        
         super.setEnable(true)
         var i = 0
         var danceDuration = 8000

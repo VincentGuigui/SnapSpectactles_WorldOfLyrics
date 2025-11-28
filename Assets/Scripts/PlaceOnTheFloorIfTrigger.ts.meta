@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/c1679c5a-c1a3-4400-b3c1-9f20bc5fd3c7>
+- !<AssetImportMetadata/36c46ffd-838d-45b1-89ca-a52028a90e42>
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 4860dc99-6b89-4fc2-9453-d4f2be69bd47
+    TypeScriptAsset: !<reference> 52e2956b-460e-45e0-9fc4-24d7a33fc965
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 4860dc99-6b89-4fc2-9453-d4f2be69bd47
+  PrimaryAsset: !<reference> 52e2956b-460e-45e0-9fc4-24d7a33fc965
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
-    TypeScriptAsset: !<own> 301e2711-0b20-451d-a8ce-f08bec24552a
+    TypeScriptAsset: !<own> 3da13df6-0372-43e9-ae3a-a17c3d11ec58
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<TypeScriptAssetData/301e2711-0b20-451d-a8ce-f08bec24552a>
+- !<TypeScriptAssetData/3da13df6-0372-43e9-ae3a-a17c3d11ec58>
   SvgIcon: ""
   SetupScript:
     code: ""
@@ -22,15 +22,17 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 0f5967cf-a8fd-4126-adf5-edb40dc17a3f
+  ComponentUid: 2cef64fd-8048-4739-a2af-1139a4449484
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     customSpawn: false
     objectToSpawn: false
+    placeholder: false
     printDebug: false
     spawnOnLateUpdate: false
     transitionDuration: false
+    worldHitTest: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -45,6 +47,8 @@
       transitionDuration: !<float> 2000.000000
       customSpawn: false
       spawnOnLateUpdate: false
+      worldHitTest: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      placeholder: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -54,3 +58,5 @@
     - // @input float transitionDuration = 2000
     - '// @input bool customSpawn {"hint":"Call to Spawn method will be done by code"}'
     - // @input bool spawnOnLateUpdate
+    - // @input AssignableType worldHitTest
+    - // @input SceneObject placeholder

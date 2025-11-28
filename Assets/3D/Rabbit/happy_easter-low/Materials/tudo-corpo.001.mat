@@ -17,7 +17,7 @@
   InstanceCount: 1
   Defines:
     []
-  BlendMode: PremultipliedAlphaAuto
+  BlendMode: Disabled
   Properties:
     Port_Input0_N062:
       typeIdx: 1

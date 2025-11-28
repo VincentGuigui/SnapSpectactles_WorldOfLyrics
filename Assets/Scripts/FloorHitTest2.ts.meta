@@ -26,8 +26,10 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
+    notified: false
     placeholder: false
     targetObject: false
+    worldHitTest: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -37,11 +39,15 @@
   Attachments:
     []
   DefaultScriptInputs:
-    - targetObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+    - worldHitTest: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      targetObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       placeholder: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      notified: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
+    - // @input AssignableType worldHitTest
     - // @input SceneObject targetObject
     - // @input SceneObject placeholder
+    - // @input AssignableType_1 notified

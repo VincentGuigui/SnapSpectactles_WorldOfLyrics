@@ -5,7 +5,6 @@ import { Song } from './Song'
 import { findAllScriptComponentsInChildren, findScriptComponentInChildren, findScriptComponentInSelfOrParents } from "SpectaclesInteractionKit.lspkg/Utils/SceneObjectUtils"
 import { LyricsDistributor } from './LyricsDistributor'
 import { LYRICS_STOP, LYRICS_STOP_DIRTY, LYRICS_WAITING, LYRICS_PAUSE } from './LyricsStates'
-import { FloorHitTest } from './FloorHitTest'
 
 @component
 export class LyricsReader extends BaseScriptComponent {
