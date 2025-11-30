@@ -1,4 +1,4 @@
-Lyrics Everywhere : world first AR Lyrics for Snap Spectacles
+# Lyrics Everywhere : world first AR Lyrics for Snap Spectacles
 
 This project is an Augmented Reality Lens designed for Snap Spectacles, built to display song lyrics directly in the user's field of view — but in a playful and immersive way that goes far beyond a traditional head‑up display.
 
@@ -51,11 +51,9 @@ Just look at your left hand and read the lyrics appearing along your fingers
 
 The Lens uses world tracking, face tracking, hand-tracking to anchor elements into the physical environment. Each lyric event is tied to a specific animation or object, creating a spatial and narrative flow:
 
-Lyrics sync with the timeline of the music
-
-3D characters react or animate accordingly
-
-Objects may appear, move, or disappear as the lyrics progress
+- Lyrics sync with the timeline of the music
+- 3D characters react or animate accordingly
+- Objects may appear, move, or disappear as the lyrics progress
 
 
 # 🛠️ Technology
