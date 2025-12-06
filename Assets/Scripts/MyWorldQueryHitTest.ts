@@ -5,7 +5,7 @@ import WorldCameraFinderProvider from "SpectaclesInteractionKit.lspkg/Providers/
 const WorldQueryModule = require("LensStudio:WorldQueryModule")
 const SIK = require("SpectaclesInteractionKit.lspkg/SIK").SIK
 const EPSILON = 0.01
-const MIN_DISTANCE_TO_FLOOR = 70;
+const MIN_DISTANCE_TO_FLOOR = 100;
 
 @component
 export class MyWorldQueryHitTest extends BaseScriptComponent {

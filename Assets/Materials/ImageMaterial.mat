@@ -1,18 +1,27 @@
-- !<Material/5992df2f-437b-4667-8520-7a2b5d58d9c8>
+- !<Material/547a770e-9739-44d6-be8b-9e993868bdf8>
   PackagePath: ""
   PassesInfo:
-    - !<own> a5c9db3c-c382-4592-a5b6-86a4dac4fccc
-- !<PassInfo/a5c9db3c-c382-4592-a5b6-86a4dac4fccc>
+    - !<own> 329ef143-19af-411e-9bd0-9f85ba6dbba3
+- !<PassInfo/329ef143-19af-411e-9bd0-9f85ba6dbba3>
   CachedProperties:
-    - rimColor:
-        typeIdx: 4
-        value: {x: 1.000000, y: 0.666667, z: 1.000000}
-    - rimExponent:
-        typeIdx: 1
-        value: 1.000000
-    - rimIntensity:
-        typeIdx: 1
-        value: 1.000000
+    - baseTex:
+        typeIdx: 9
+        value:
+          id: 47608bd1-3e7e-4c41-9a2b-242f1c5b20c1
+          sampler:
+            filteringMode: Trilinear
+            wrapModeU: Repeat
+            wrapModeV: Repeat
+            wrapModeW: Repeat
+            borderColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+            mipmaps: false
+          type: Texture2D
+    - baseTexTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -24,7 +33,6 @@
   FrustumCullPad: 0.000000
   InstanceCount: 1
   Defines:
-    - ENABLE_BASE_TEX
     - NODE_13_DROPLIST_ITEM 0
     - NODE_181_DROPLIST_ITEM 0
     - NODE_184_DROPLIST_ITEM 0
@@ -32,41 +40,23 @@
     - NODE_228_DROPLIST_ITEM 0
     - NODE_27_DROPLIST_ITEM 0
     - NODE_315_DROPLIST_ITEM 0
-    - NODE_38_DROPLIST_ITEM 0
     - NODE_49_DROPLIST_ITEM 0
     - NODE_69_DROPLIST_ITEM 0
     - NODE_76_DROPLIST_ITEM 0
     - ENABLE_NORMALMAP
-  BlendMode: PremultipliedAlphaAuto
+    - NODE_38_DROPLIST_ITEM 1
+  BlendMode: Disabled
   Properties:
     PreviewEnabled:
       typeIdx: 0
       value: 0
     baseColor:
       typeIdx: 5
-      value: {x: 0.333333, y: 0.666667, z: 1.000000, w: 1.000000}
-    baseTex:
-      typeIdx: 9
-      value:
-        id: a5ccf442-9949-4129-82b4-7c7c06cda67e
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    baseTexTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
+      value: {x: 1.000000, y: 0.333333, z: 1.000000, w: 1.000000}
     materialParamsTex:
       typeIdx: 9
       value:
-        id: 22c991c4-bd0a-499c-86d3-fa136d7e6e86
+        id: 47608bd1-3e7e-4c41-9a2b-242f1c5b20c1
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -83,11 +73,11 @@
         2: {x: 0.000000, y: 0.000000, z: 1.000000}
     metallic:
       typeIdx: 1
-      value: 1.000000
+      value: 0.000000
     normalTex:
       typeIdx: 9
       value:
-        id: 22c991c4-bd0a-499c-86d3-fa136d7e6e86
+        id: 47608bd1-3e7e-4c41-9a2b-242f1c5b20c1
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat

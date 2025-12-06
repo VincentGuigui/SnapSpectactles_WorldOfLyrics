@@ -255,7 +255,7 @@
   PrefabRemaps:
     []
   Name: RabbitAndTree
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: -50.000000, z: 0.000000}
@@ -360,7 +360,7 @@
   PrefabRemaps:
     []
   Name: Rabbit
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 23.227713, y: 7.283201, z: 13.370941}
@@ -3169,7 +3169,7 @@
   PrefabRemaps:
     []
   Name: FloorOcclusion
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: -8.309788}
