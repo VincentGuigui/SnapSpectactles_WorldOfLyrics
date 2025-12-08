@@ -40,6 +40,7 @@
     HasSegmentScaleCompensation: false
   Children:
     - !<own> 15a76bb2-603d-4e49-bfe6-9352e8bb022e
+    - !<own> 46477a53-1343-4821-86e4-55857c53b2a0
   Components:
     - !<own> 00000000-0000-0065-0000-000000000065
     - !<own> 50ee7494-674a-4c52-9b1b-7d4b0850e301
@@ -608,6 +609,22 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/11ac662b-b69a-4b80-a2a8-4ccfb505b6ee>
+  PrefabRemaps:
+    []
+  Name: LipSyncRed
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 8.000000, y: 8.000000, z: 8.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> ea56f7c5-2869-4dc9-8efd-2392134859e2
+    - !<own> 922aba87-e72d-43d3-91cc-ee93a3e2972d
 - !<Text/121c4af1-2c60-431c-b8db-06ba0fc8fd4f>
   PrefabRemaps:
     []
@@ -2985,6 +3002,21 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<SceneObject/46477a53-1343-4821-86e4-55857c53b2a0>
+  PrefabRemaps:
+    []
+  Name: Mouth
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -40.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 11ac662b-b69a-4b80-a2a8-4ccfb505b6ee
+  Components:
+    - !<own> dcfae1c2-e5d6-461d-a7cb-a54e626c2232
 - !<SceneObject/46daa1fc-4e1a-4ea9-8283-a09cab4ea418>
   PrefabRemaps:
     []
@@ -5816,6 +5848,34 @@
     - !<own> 62589dd7-480d-4b73-b603-09ae928976f2
   Components:
     - !<own> 530a6384-35fc-4055-9fb8-7985beb2b1b0
+- !<ScriptComponent/922aba87-e72d-43d3-91cc-ee93a3e2972d>
+  PrefabRemaps:
+    []
+  Name: LipSyncLyricsDistributor
+  Enabled: true
+  ScriptAsset: !<reference> 87b294f9-e64a-4e43-bf8e-363c18e92f51
+  ScriptInputsDefault:
+    fakeLyrics: true
+    lyricsOffset: true
+    withFutureLyrics: true
+    withRemainerObject: true
+    centeredAcrossObjects: true
+    autoPlay: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      fakeLyrics: ""
+      lyricsOffset: !<float> 0.000000
+      parentObject: !<reference.SceneObject> 11ac662b-b69a-4b80-a2a8-4ccfb505b6ee
+      withFutureLyrics: true
+      withRemainerObject: false
+      centeredAcrossObjects: false
+      autoPlay: true
+      loop: !<float> -1.000000
+  ScriptTypes:
+    "":
+      {}
 - !<ScriptComponent/9245e011-4241-4fd8-8c94-4f70e3456203>
   PrefabRemaps:
     []
@@ -8637,6 +8697,23 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<Head/dcfae1c2-e5d6-461d-a7cb-a54e626c2232>
+  PrefabRemaps:
+    []
+  Name: Head Binding
+  Enabled: true
+  AttachmentPointType: MouthCenter
+  FaceIndex: 0
+  AttachedBarycentricVertex:
+    indices:
+      - 94
+      - 70
+      - 70
+    weights:
+      - 1.000000
+      - 0.000000
+      - 0.000000
+  TrackingScope: !<reference> 00000000-0000-0000-0000-000000000000
 - !<RenderMeshVisual/dd58f1bd-8eca-4b67-b92e-f1b68456bfa6>
   PrefabRemaps:
     []
@@ -9004,6 +9081,25 @@
     ring-3_end_end_end: !<reference> b99a83a6-cf37-4b84-a8cc-3bcdd747366a
     thumb-3_end_end_end_end: !<reference> ff16c49d-03b8-4058-934d-d6fa59c3ada1
     pinky-3_end_end: !<reference> 7dae604d-fa14-423a-bc5b-cf6854c36f05
+- !<Image/ea56f7c5-2869-4dc9-8efd-2392134859e2>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Fit
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> a57cca50-03e6-4657-9185-67633f2f251b
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/ead00b75-4d81-4e36-8c2c-5f5e6fa7d904>
   PrefabRemaps:
     []

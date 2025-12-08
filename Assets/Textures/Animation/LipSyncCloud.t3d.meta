@@ -3,6 +3,7 @@
     AnimatedTexture: !<reference> 08f376b1-519d-4743-9207-efa2470407f4
     atlas_0.png: !<reference> 1e054a7d-6773-41b8-83d0-665e51fbb624
     LipSyncRed.png: !<reference> 90876015-646a-4752-91e3-9650ed34eb49
+    LipSyncCloud.png: !<reference> 9a9ed70c-6efe-4472-b46e-87cb9b737b30
   ImporterName: LensAnimationImporter
   PrimaryAsset: !<reference> 08f376b1-519d-4743-9207-efa2470407f4
   PackageType: LegacyPackage
@@ -12,7 +13,7 @@
   AssetDataMap:
     AnimatedTexture: !<own> eaadf383-7489-486e-8588-92e7228624aa
   DependentFiles:
-    - LipSyncRed.png
+    - LipSyncCloud.png
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<SingleCompressionSettings>

@@ -1,0 +1,31 @@
+- !<AssetImportMetadata/74931098-e3e8-461f-86a4-990c6df15774>
+  ImportedAssetIds:
+    AnimatedTexture: !<reference> 9c48d886-bc01-4713-99dc-fa913bd91614
+    LipSyncRed.png: !<reference> a55f7fd9-5268-452b-865f-6e5be13729d6
+    LipSyncHuman.png: !<reference> 96c22691-50b3-4f32-96b0-f3653aa43b11
+  ImporterName: LensAnimationImporter
+  PrimaryAsset: !<reference> 9c48d886-bc01-4713-99dc-fa913bd91614
+  PackageType: LegacyPackage
+  LegacyPackagePolicy: CannotBeUnpackedTransparent
+  ExtraData:
+    {}
+  AssetDataMap:
+    AnimatedTexture: !<own> a78521c0-080e-4458-9c91-55df106a39d1
+  DependentFiles:
+    - LipSyncHuman.png
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: None
+    CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AnimatedTextureData/a78521c0-080e-4458-9c91-55df106a39d1>
+  AutoPlay: true
+  Reversed: false
+  PingPong: false
+  CurrentSequence: default
+  KeyFramesData:
+    default:
+      - time: 0.000000
+        value: 0
+      - time: 24.000000
+        value: 12
